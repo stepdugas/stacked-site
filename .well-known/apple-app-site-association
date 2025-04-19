@@ -1,0 +1,11 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "YV56753Y7A.me.Dugas.Steph.Stacked",
+        "paths": [ "/import*", "/privacy", "/" ]
+      }
+    ]
+  }
+}
