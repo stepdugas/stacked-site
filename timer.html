@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pomodoro Timer - Stacked</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2em;
+      background: linear-gradient(to right, #3b82f6, #d946ef);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .timer {
+      font-size: 4em;
+      margin-top: 20px;
+    }
+
+    button {
+      background-color: #3b82f6;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      margin: 10px;
+      cursor: pointer;
+    }
+
+    .mode {
+      margin-top: 16px;
+      font-size: 1.2rem;
+      color: #bbb;
+    }
+
+    .note {
+      margin-top: 30px;
+      font-size: 0.9rem;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <h1>Pomodoro Timer</h1>
+  <div class="timer" id="timer">25:00</div>
+  <div class="mode" id="mode">Focus Time</div>
+  <div>
+    <button onclick="startTimer()">Start</button>
+    <button onclick="resetTimer()">Reset</button>
+  </div>
+  <div class="note">25 minutes of focus, followed by 5-minute breaks. Repeat to stay productive 💪</div>
+
+  <script>
+    let focusMinutes = 25;
+    let breakMinutes = 5;
+    let secondsLeft = focusMinutes * 60;
+    let interval = null;
+    let onBreak = false;
+
+    function updateDisplay() {
+      const mins = String(Math.floor(secondsLeft / 60)).padStart(2, '0');
+      const secs = String(secondsLeft % 60).padStart(2, '0');
+      document.getElementById('timer').textContent = `${mins}:${secs}`;
+      document.getElementById('mode').textContent = onBreak ? "Break Time" : "Focus Time";
+    }
+
+    function startTimer() {
+      if (interval) return;
+
+      interval = setInterval(() => {
+        secondsLeft--;
+        updateDisplay();
+
+        if (secondsLeft <= 0) {
+          clearInterval(interval);
+          interval = null;
+          onBreak = !onBreak;
+          secondsLeft = (onBreak ? breakMinutes : focusMinutes) * 60;
+          alert(onBreak ? "Time for a break!" : "Back to work!");
+          updateDisplay();
+        }
+      }, 1000);
+    }
+
+    function resetTimer() {
+      clearInterval(interval);
+      interval = null;
+      onBreak = false;
+      secondsLeft = focusMinutes * 60;
+      updateDisplay();
+    }
+
+    updateDisplay();
+  </script>
+</body>
+</html>
