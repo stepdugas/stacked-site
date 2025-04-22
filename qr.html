@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>QR Code Generator - Stacked</title>
+  <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.3/build/qrcode.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: white;
+      padding: 20px;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2em;
+      background: linear-gradient(to right, #f472b6, #60a5fa);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      border-radius: 8px;
+      font-size: 1rem;
+      border: none;
+      margin-top: 12px;
+    }
+
+    button {
+      margin-top: 12px;
+      background-color: #3b82f6;
+      color: white;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    #qrcode {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .note {
+      font-size: 0.9em;
+      color: #bbb;
+      margin-top: 10px;
+    }
+
+    canvas {
+      margin-top: 16px;
+    }
+  </style>
+</head>
+<body>
+  <h1>QR Code Generator</h1>
+
+  <p>Paste your <code>https://stackedflashcards.com/import?stack=...</code> link below:</p>
+  <input type="text" id="stackLink" placeholder="Paste your stack link here" />
+  <button onclick="generateQR()">Generate QR Code</button>
+
+  <div class="note">Users can scan this QR code to open your stack directly in the app.</div>
+
+  <div id="qrcode"></div>
+
+  <script>
+    function generateQR() {
+      const link = document.getElementById("stackLink").value.trim();
+      const qrcodeContainer = document.getElementById("qrcode");
+      qrcodeContainer.innerHTML = "";
+
+      if (link.startsWith("https://stackedflashcards.com/import?stack=")) {
+        QRCode.toCanvas(link, { width: 220 }, function (err, canvas) {
+          if (err) {
+            console.error(err);
+            qrcodeContainer.innerText = "Something went wrong generating the QR code.";
+          } else {
+            qrcodeContainer.appendChild(canvas);
+          }
+        });
+      } else {
+        qrcodeContainer.innerText = "Please enter a valid stack import link.";
+      }
+    }
+  </script>
+</body>
+</html>
