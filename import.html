@@ -181,16 +181,72 @@
       margin-top: 8px;
     }
 
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(11, 11, 11, 0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid #1a1a1a;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 24px;
+      height: 56px;
+      margin: -24px -20px 32px;
+    }
+    .nav-logo {
+      font-size: 1.1rem;
+      font-weight: 800;
+      background: linear-gradient(to right, #a855f7, #3b82f6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-decoration: none;
+    }
+    .nav-links { display: flex; gap: 6px; align-items: center; }
+    .nav-links a {
+      color: #888;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      padding: 6px 12px;
+      border-radius: 8px;
+      transition: color 0.2s, background 0.2s;
+    }
+    .nav-links a:hover { color: white; background: #1a1a1a; }
+    .nav-links a.active { color: white; }
+    .nav-links .nav-cta {
+      background: linear-gradient(to right, #a855f7, #3b82f6);
+      color: white;
+      padding: 7px 16px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.85rem;
+    }
+    .nav-links .nav-cta:hover { opacity: 0.85; background: linear-gradient(to right, #a855f7, #3b82f6); }
+
     footer {
       text-align: center;
       padding-top: 40px;
       font-size: 0.8em;
       color: #444;
     }
-    footer a { color: #555; }
+    footer a { color: #555; text-decoration: none; margin: 0 8px; }
+    footer a:hover { color: #888; }
   </style>
 </head>
 <body>
+
+  <nav>
+    <a class="nav-logo" href="/">Stacked</a>
+    <div class="nav-links">
+      <a href="/">Home</a>
+      <a href="/import.html" class="active">Import Tool</a>
+      <a href="/timer.html">Timer</a>
+      <a href="https://apps.apple.com/app/id6744585549" target="_blank" rel="noopener" class="nav-cta">📲 Download</a>
+    </div>
+  </nav>
 
   <h1>Import Flashcards</h1>
   <p class="subtitle">Build a stack on the web, open it instantly in the app.</p>
@@ -224,7 +280,9 @@
   </div>
 
   <footer>
-    <a href="/">← Back to Stacked</a> &nbsp;·&nbsp;
+    <a href="/">Home</a>
+    <a href="/import.html">Import Tool</a>
+    <a href="/timer.html">Pomodoro Timer</a>
     <a href="/privacy.html">Privacy Policy</a>
   </footer>
 

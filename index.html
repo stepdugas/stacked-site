@@ -16,6 +16,59 @@
       text-align: center;
     }
 
+    /* ── Nav ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(11, 11, 11, 0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid #1a1a1a;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 24px;
+      height: 56px;
+    }
+
+    .nav-logo {
+      font-size: 1.1rem;
+      font-weight: 800;
+      background: linear-gradient(to right, #a855f7, #3b82f6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 6px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: #888;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      padding: 6px 12px;
+      border-radius: 8px;
+      transition: color 0.2s, background 0.2s;
+    }
+    .nav-links a:hover { color: white; background: #1a1a1a; }
+    .nav-links a.active { color: white; }
+
+    .nav-links .nav-cta {
+      background: linear-gradient(to right, #a855f7, #3b82f6);
+      color: white;
+      padding: 7px 16px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.85rem;
+    }
+    .nav-links .nav-cta:hover { opacity: 0.85; background: linear-gradient(to right, #a855f7, #3b82f6); }
+
     /* ── Hero ── */
     .hero {
       display: flex;
@@ -70,9 +123,9 @@
 
     .feature-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
-      max-width: 760px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      max-width: 680px;
       margin: auto;
       text-align: left;
     }
@@ -82,6 +135,17 @@
       border: 1px solid #222;
       border-radius: 16px;
       padding: 24px 20px;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      transition: border-color 0.2s, background 0.2s, transform 0.15s;
+      cursor: pointer;
+    }
+    .feature-card:hover {
+      border-color: #a855f7;
+      background: #1e1624;
+      transform: translateY(-2px);
     }
 
     .feature-icon {
@@ -93,6 +157,7 @@
       font-size: 1em;
       font-weight: 700;
       margin: 0 0 6px;
+      color: white;
     }
 
     .feature-card p {
@@ -100,6 +165,14 @@
       color: #777;
       margin: 0;
       line-height: 1.5;
+      flex: 1;
+    }
+
+    .feature-card .card-arrow {
+      margin-top: 14px;
+      font-size: 0.8rem;
+      color: #a855f7;
+      font-weight: 600;
     }
 
     /* ── Import CTA ── */
@@ -209,9 +282,26 @@
     }
     footer a { color: #555; text-decoration: none; margin: 0 10px; }
     footer a:hover { color: #888; }
+
+    @media (max-width: 480px) {
+      .feature-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+      .hero h1 { font-size: 2.4em; }
+      .nav-links a:not(.nav-cta) { display: none; }
+    }
   </style>
 </head>
 <body>
+
+  <!-- Nav -->
+  <nav>
+    <a class="nav-logo" href="/">Stacked</a>
+    <div class="nav-links">
+      <a href="/" class="active">Home</a>
+      <a href="/import.html">Import Tool</a>
+      <a href="/timer.html">Timer</a>
+      <a href="https://apps.apple.com/app/id6744585549" target="_blank" rel="noopener" class="nav-cta">📲 Download</a>
+    </div>
+  </nav>
 
   <!-- Hero -->
   <section class="hero">
@@ -226,26 +316,30 @@
   <section class="features">
     <h2>Everything you need to study smarter</h2>
     <div class="feature-grid">
-      <div class="feature-card">
+      <a class="feature-card" href="/import.html">
         <div class="feature-icon">✨</div>
         <h3>AI Flashcards</h3>
         <p>Paste notes, scan a photo, or upload a PDF — AI turns your content into a study-ready deck.</p>
-      </div>
-      <div class="feature-card">
+        <div class="card-arrow">Try the web tool →</div>
+      </a>
+      <a class="feature-card" href="/import.html">
         <div class="feature-icon">📤</div>
         <h3>Share Any Stack</h3>
         <p>Send a link and your study partner imports your deck instantly — no account needed.</p>
-      </div>
-      <div class="feature-card">
+        <div class="card-arrow">Build a shareable deck →</div>
+      </a>
+      <a class="feature-card" href="https://apps.apple.com/app/id6744585549" target="_blank" rel="noopener">
         <div class="feature-icon">🎨</div>
         <h3>Customize</h3>
         <p>Pick colors, rename stacks, and edit cards so your flashcards feel like yours.</p>
-      </div>
-      <div class="feature-card">
+        <div class="card-arrow">Get the app →</div>
+      </a>
+      <a class="feature-card" href="https://apps.apple.com/app/id6744585549" target="_blank" rel="noopener">
         <div class="feature-icon">📵</div>
         <h3>No Distractions</h3>
         <p>Pro members study ad-free with full AI access and unlimited sharing.</p>
-      </div>
+        <div class="card-arrow">Unlock Pro →</div>
+      </a>
     </div>
   </section>
 
@@ -260,7 +354,6 @@
   <section class="email-section">
     <h2>Not on iPhone?</h2>
     <p>Leave your email and we'll let you know when Stacked is available on more platforms.</p>
-    <!-- Replace YOUR_FORM_ID below with your Formspree form ID: https://formspree.io -->
     <form class="email-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" onsubmit="handleEmailSubmit(event)">
       <input type="email" name="email" placeholder="your@email.com" required />
       <button type="submit">Notify Me</button>
@@ -277,7 +370,6 @@
 
   <script>
     function handleEmailSubmit(e) {
-      // If Formspree isn't configured yet, prevent default and show thanks
       const form = e.target;
       if (form.action.includes('YOUR_FORM_ID')) {
         e.preventDefault();
@@ -285,7 +377,6 @@
         document.getElementById('email-thanks').style.display = 'block';
         return;
       }
-      // Otherwise let Formspree handle it
       e.preventDefault();
       fetch(form.action, {
         method: 'POST',
