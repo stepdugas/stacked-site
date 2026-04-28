@@ -268,9 +268,13 @@
       for (let i = 0; i < utf8Bytes.length; i++) binary += String.fromCharCode(utf8Bytes[i]);
       const encoded = btoa(binary);
       const importUrl = 'https://stackedflashcards.com/import?stack=' + encodeURIComponent(encoded);
-      // Try to open in app, fallback to App Store for non-iOS users
-      const w = window.open(importUrl, '_blank');
-      if (!w) window.location.href = importUrl;
+      // On iOS with app installed, this triggers the universal link directly
+      // On desktop/without app, we fall back to the download page after a timeout
+      window.location.href = importUrl;
+      setTimeout(function() {
+        // If we're still here after 1.5s, the app didn't handle the link
+        window.location.href = '/import-redirect.html';
+      }, 1500);
     }
 
     function toggleQR(event) {
