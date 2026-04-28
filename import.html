@@ -3,79 +3,270 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Import Flashcards - Stacked</title>
+  <title>Free Flashcard Maker — Create & Import Study Cards | Stacked</title>
+  <meta name="description" content="Free online flashcard maker. Create flashcards, pick colors, and import them directly into the Stacked app with a link or QR code. No sign-up required." />
+  <meta name="keywords" content="flashcard maker, free flashcard maker, create flashcards online, study cards, flashcard generator, make flashcards" />
+  <link rel="canonical" href="https://stackedflashcards.com/import.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://stackedflashcards.com/import.html" />
+  <meta property="og:title" content="Free Flashcard Maker — Create Study Cards Online" />
+  <meta property="og:description" content="Build flashcard decks on the web and import them into the Stacked app instantly. Free, no sign-up needed." />
+  <meta property="og:image" content="https://stackedflashcards.com/og-image.png" />
+  <meta property="og:site_name" content="Stacked Flashcards" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Free Flashcard Maker — Create Study Cards Online" />
+  <meta name="twitter:description" content="Build flashcard decks on the web and import them into Stacked instantly. Free, no sign-up." />
+  <meta name="twitter:image" content="https://stackedflashcards.com/og-image.png" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Free Flashcard Maker by Stacked",
+    "url": "https://stackedflashcards.com/import.html",
+    "applicationCategory": "EducationApplication",
+    "operatingSystem": "Any",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "description": "Free online flashcard maker. Create flashcards with custom colors and import them into the Stacked app with a link or QR code."
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://stackedflashcards.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Flashcard Maker", "item": "https://stackedflashcards.com/import.html" }
+    ]
+  }
+  </script>
+
   <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.3/build/qrcode.min.js"></script>
+
+  <link rel="icon" href="/favicon.ico" sizes="32x32" />
+  <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/manifest.json" />
+
+  <!-- Preload fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
   <style>
-    *, *::before, *::after { box-sizing: border-box; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --purple: #a855f7;
+      --blue: #3b82f6;
+      --bg-primary: #09090b;
+      --bg-secondary: #0f0f12;
+      --bg-card: #16161a;
+      --border: #1e1e24;
+      --border-hover: #2e2e38;
+      --text-primary: #f4f4f5;
+      --text-secondary: #a1a1aa;
+      --text-muted: #71717a;
+      --gradient: linear-gradient(135deg, #a855f7, #6366f1, #3b82f6);
+      --gradient-subtle: linear-gradient(135deg, rgba(168,85,247,0.12), rgba(59,130,246,0.12));
+      --glow-purple: rgba(168, 85, 247, 0.15);
+      --radius: 16px;
+      --radius-sm: 10px;
+      --radius-lg: 24px;
+    }
+
+    html { scroll-behavior: smooth; }
 
     body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      background: #0b0b0b;
-      color: white;
-      padding: 24px 20px 60px;
-      max-width: 680px;
-      margin: auto;
+      background: var(--bg-primary);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      color: var(--text-primary);
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
     }
 
-    h1 {
-      text-align: center;
-      font-size: 2.2em;
-      background: linear-gradient(to right, #a855f7, #3b82f6);
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    /* ── Nav ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(9, 9, 11, 0.8);
+      backdrop-filter: blur(20px) saturate(180%);
+      -webkit-backdrop-filter: blur(20px) saturate(180%);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 32px;
+      height: 64px;
+    }
+
+    .nav-logo {
+      font-size: 1.2rem;
+      font-weight: 800;
+      background: var(--gradient);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      margin-bottom: 6px;
+      text-decoration: none;
+      letter-spacing: -0.02em;
     }
 
-    .subtitle {
+    .nav-links { display: flex; gap: 4px; align-items: center; }
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.875rem;
+      font-weight: 500;
+      padding: 8px 14px;
+      border-radius: var(--radius-sm);
+      transition: all 0.2s ease;
+    }
+    .nav-links a:hover { color: var(--text-primary); background: rgba(255,255,255,0.05); }
+    .nav-links a.active { color: var(--text-primary); }
+    .nav-cta {
+      background: var(--gradient) !important;
+      color: white !important;
+      padding: 8px 18px !important;
+      border-radius: var(--radius-sm) !important;
+      font-weight: 600 !important;
+      font-size: 0.85rem !important;
+      transition: opacity 0.2s, transform 0.2s !important;
+    }
+    .nav-cta:hover { opacity: 0.9 !important; transform: translateY(-1px) !important; }
+
+    /* ── Page content ── */
+    .page-content {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    .page-header {
       text-align: center;
-      color: #888;
-      margin-bottom: 32px;
+      margin-bottom: 40px;
+      position: relative;
+    }
+
+    .page-header::before {
+      content: '';
+      position: absolute;
+      top: -100px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 500px;
+      height: 300px;
+      background: radial-gradient(ellipse, var(--glow-purple) 0%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .page-header > * { position: relative; z-index: 1; }
+
+    .page-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(74, 222, 128, 0.1);
+      border: 1px solid rgba(74, 222, 128, 0.2);
+      color: #4ade80;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 5px 14px;
+      border-radius: 100px;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .page-header h1 {
+      font-size: clamp(2rem, 5vw, 2.6rem);
+      font-weight: 900;
+      letter-spacing: -0.04em;
+      margin-bottom: 10px;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .page-subtitle {
+      color: var(--text-secondary);
       font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    /* ── Form elements ── */
+    .form-group {
+      margin-bottom: 20px;
     }
 
     label {
       display: block;
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: #aaa;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--text-secondary);
       text-transform: uppercase;
-      letter-spacing: 0.05em;
-      margin-bottom: 6px;
-      margin-top: 20px;
+      letter-spacing: 0.06em;
+      margin-bottom: 8px;
+    }
+
+    label .hint {
+      color: var(--text-muted);
+      font-weight: 400;
+      text-transform: none;
+      letter-spacing: 0;
     }
 
     input[type="text"] {
       width: 100%;
-      padding: 11px 14px;
-      border-radius: 10px;
-      border: 1px solid #333;
-      background: #1a1a1a;
+      padding: 13px 16px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border);
+      background: var(--bg-card);
       color: white;
-      font-size: 1rem;
+      font-size: 0.95rem;
+      font-family: inherit;
       outline: none;
       transition: border-color 0.2s;
     }
-    input[type="text"]:focus { border-color: #a855f7; }
+    input[type="text"]:focus { border-color: var(--purple); }
 
     textarea {
       width: 100%;
       height: 200px;
-      margin-top: 0;
-      font-size: 0.95rem;
-      padding: 12px 14px;
-      border-radius: 10px;
-      border: 1px solid #333;
-      background: #1a1a1a;
+      font-size: 0.92rem;
+      padding: 14px 16px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border);
+      background: var(--bg-card);
       color: white;
       resize: vertical;
       font-family: inherit;
       outline: none;
       transition: border-color 0.2s;
+      line-height: 1.6;
     }
-    textarea:focus { border-color: #a855f7; }
-    textarea::placeholder { color: #555; }
+    textarea:focus { border-color: var(--purple); }
+    textarea::placeholder { color: var(--text-muted); }
 
-    /* Color picker */
+    /* ── Color picker ── */
     .color-swatches {
       display: flex;
       gap: 12px;
@@ -83,153 +274,319 @@
       margin-top: 4px;
     }
     .swatch {
-      width: 36px;
-      height: 36px;
+      width: 40px;
+      height: 40px;
       border-radius: 50%;
       cursor: pointer;
       border: 3px solid transparent;
-      transition: border-color 0.15s, transform 0.15s;
+      transition: all 0.2s;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
     }
-    .swatch:hover { transform: scale(1.12); }
-    .swatch.selected { border-color: white; }
+    .swatch:hover { transform: scale(1.15); }
+    .swatch.selected { border-color: white; box-shadow: 0 0 0 2px var(--purple), 0 2px 8px rgba(0,0,0,0.3); }
 
-    /* Generate button */
-    button.primary {
-      margin-top: 24px;
+    /* ── Generate button ── */
+    .btn-generate {
+      margin-top: 28px;
       width: 100%;
-      background: linear-gradient(to right, #a855f7, #3b82f6);
+      background: var(--gradient);
       color: white;
       border: none;
-      padding: 14px;
-      border-radius: 12px;
+      padding: 16px;
+      border-radius: 14px;
       font-size: 1.05rem;
-      font-weight: 600;
+      font-weight: 700;
+      font-family: inherit;
       cursor: pointer;
-      transition: opacity 0.2s;
+      transition: opacity 0.2s, transform 0.15s;
+      box-shadow: 0 4px 20px rgba(168, 85, 247, 0.25);
     }
-    button.primary:hover { opacity: 0.88; }
+    .btn-generate:hover { opacity: 0.9; transform: translateY(-1px); }
+    .btn-generate:active { transform: scale(0.99); }
 
-    /* Output */
+    /* ── Output ── */
     #output {
-      margin-top: 32px;
+      margin-top: 36px;
       display: none;
     }
 
     .result-section {
-      background: #161616;
-      border: 1px solid #2a2a2a;
-      border-radius: 14px;
-      padding: 20px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
       margin-bottom: 20px;
     }
 
     .result-section h3 {
-      margin: 0 0 12px;
-      font-size: 0.9rem;
+      margin: 0 0 14px;
+      font-size: 0.8rem;
       text-transform: uppercase;
-      letter-spacing: 0.06em;
-      color: #888;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      font-weight: 700;
     }
 
     .link-box {
-      background: #0f0f0f;
-      border-radius: 8px;
-      padding: 10px 12px;
-      font-size: 0.8rem;
-      color: #60a5fa;
+      background: var(--bg-primary);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 12px 14px;
+      font-size: 0.78rem;
+      color: var(--blue);
       word-break: break-all;
-      margin-bottom: 10px;
+      margin-bottom: 14px;
+      font-family: monospace;
+    }
+
+    .action-buttons {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      flex-wrap: wrap;
     }
 
     .copy-btn {
-      background: #222;
-      color: #ccc;
-      border: 1px solid #333;
-      padding: 8px 16px;
-      border-radius: 8px;
+      background: rgba(255,255,255,0.05);
+      color: var(--text-secondary);
+      border: 1px solid var(--border);
+      padding: 10px 18px;
+      border-radius: var(--radius-sm);
       font-size: 0.85rem;
+      font-weight: 600;
+      font-family: inherit;
       cursor: pointer;
-      transition: background 0.2s;
+      transition: all 0.2s;
     }
-    .copy-btn:hover { background: #2e2e2e; }
-    .copy-btn.copied { color: #4ade80; border-color: #4ade80; }
+    .copy-btn:hover { background: rgba(255,255,255,0.08); border-color: var(--border-hover); }
+    .copy-btn.copied { color: #4ade80; border-color: rgba(74, 222, 128, 0.3); }
 
     .open-btn {
       display: inline-block;
-      margin-top: 10px;
-      background: linear-gradient(to right, #a855f7, #3b82f6);
+      background: var(--gradient);
       color: white;
-      padding: 10px 20px;
-      border-radius: 10px;
+      padding: 10px 22px;
+      border-radius: var(--radius-sm);
       text-decoration: none;
       font-weight: 600;
-      font-size: 0.95rem;
+      font-size: 0.9rem;
+      transition: opacity 0.2s;
+    }
+    .open-btn:hover { opacity: 0.9; }
+
+    .result-note {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-top: 12px;
+      line-height: 1.6;
     }
 
     #qrcode {
       display: flex;
       justify-content: center;
-      margin-top: 4px;
-    }
-    #qrcode canvas {
-      border-radius: 10px;
-    }
-
-    .note {
-      font-size: 0.85rem;
-      color: #555;
       margin-top: 8px;
     }
-
-    footer {
-      text-align: center;
-      padding-top: 40px;
-      font-size: 0.8em;
-      color: #444;
+    #qrcode canvas {
+      border-radius: var(--radius-sm);
     }
-    footer a { color: #555; }
+
+    /* ── Footer ── */
+    footer {
+      padding: 40px 24px;
+      border-top: 1px solid var(--border);
+      text-align: center;
+    }
+
+    .footer-inner {
+      max-width: 740px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .footer-brand {
+      font-size: 1rem;
+      font-weight: 800;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.82rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--text-secondary); }
+
+    .footer-copy {
+      width: 100%;
+      text-align: center;
+      margin-top: 24px;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    @media (max-width: 640px) {
+      nav { padding: 0 16px; }
+      .nav-links a:not(.nav-cta) { display: none; }
+      .nav-hamburger { display: flex; }
+      .page-content { padding: 32px 16px 60px; }
+      .footer-inner { justify-content: center; text-align: center; }
+      .footer-links { justify-content: center; }
+    }
+
+    /* ── Hamburger menu ── */
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+      z-index: 1002;
+    }
+    .nav-hamburger span {
+      display: block;
+      width: 20px;
+      height: 2px;
+      background: var(--text-secondary, #a1a1aa);
+      border-radius: 2px;
+      transition: all 0.3s;
+    }
+    .nav-mobile {
+      display: none;
+      position: fixed;
+      inset: 0;
+      top: 64px;
+      background: rgba(9, 9, 11, 0.98);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 24px;
+      gap: 8px;
+      z-index: 999;
+    }
+    .nav-mobile.open { display: flex; }
+    .nav-mobile a {
+      color: #a1a1aa;
+      text-decoration: none;
+      font-size: 1.1rem;
+      font-weight: 600;
+      padding: 14px 24px;
+      border-radius: 12px;
+      transition: all 0.2s;
+      width: 100%;
+      max-width: 320px;
+      text-align: center;
+    }
+    .nav-mobile a:hover { color: #f4f4f5; background: rgba(255,255,255,0.05); }
+    .nav-mobile .mobile-cta {
+      background: linear-gradient(135deg, #a855f7, #6366f1, #3b82f6);
+      color: white;
+      margin-top: 8px;
+    }
   </style>
 </head>
 <body>
 
-  <h1>Import Flashcards</h1>
-  <p class="subtitle">Build a stack on the web, open it instantly in the app.</p>
-
-  <label for="stackName">Stack Name</label>
-  <input type="text" id="stackName" placeholder="e.g. Biology Chapter 5" maxlength="60" />
-
-  <label>Stack Color</label>
-  <div class="color-swatches" id="swatches"></div>
-
-  <label for="input">Flashcards <span style="color:#555;font-weight:400;text-transform:none;">(one per line — Question | Answer)</span></label>
-  <textarea id="input" placeholder="What is the capital of France? | Paris&#10;What year did WWII end? | 1945&#10;Mitochondria function | Produces ATP / energy for the cell"></textarea>
-
-  <button class="primary" onclick="generateLink()">✨ Generate Import Link &amp; QR Code</button>
-
-  <div id="output">
-    <div class="result-section">
-      <h3>Import Link</h3>
-      <div class="link-box" id="linkDisplay"></div>
-      <button class="copy-btn" id="copyBtn" onclick="copyLink()">Copy Link</button>
-      &nbsp;
-      <a id="openLink" class="open-btn" href="#">Open in App →</a>
-      <p class="note">Tap "Open in App" on your iPhone, or copy the link and paste it in Safari.</p>
+  <nav>
+    <a class="nav-logo" href="/">Stacked</a>
+    <div class="nav-links">
+      <a href="/">Home</a>
+      <a href="/decks.html">Decks</a>
+      <a href="/timer.html">Timer</a>
+      <a href="https://apps.apple.com/app/id6744585549" target="_blank" rel="noopener" class="nav-cta">Download Free</a>
     </div>
+    <button class="nav-hamburger" onclick="document.querySelector('.nav-mobile').classList.toggle('open')" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
 
-    <div class="result-section">
-      <h3>QR Code</h3>
-      <div id="qrcode"></div>
-      <p class="note" style="text-align:center;">Scan with your iPhone camera to import directly.</p>
-    </div>
+  <div class="nav-mobile">
+    <a href="/">Home</a>
+    <a href="/decks.html">Browse Decks</a>
+    <a href="/timer.html">Pomodoro Timer</a>
+    <a href="/import.html">Flashcard Maker</a>
+    <a href="/study-tips.html">Study Tips</a>
+    <a href="/grade-calculator.html">Grade Calculator</a>
+    <a href="https://apps.apple.com/app/id6744585549" target="_blank" rel="noopener" class="mobile-cta">Download Free</a>
   </div>
 
+  <main class="page-content">
+
+    <div class="page-header">
+      <div class="page-badge">Free — No Sign Up Required</div>
+      <h1>Flashcard Maker</h1>
+      <p class="page-subtitle">Build a study deck on the web, then open it instantly in the Stacked app.</p>
+    </div>
+
+    <div class="form-group">
+      <label for="stackName">Stack Name</label>
+      <input type="text" id="stackName" placeholder="e.g. Biology Chapter 5" maxlength="60" />
+    </div>
+
+    <div class="form-group">
+      <label>Stack Color</label>
+      <div class="color-swatches" id="swatches" role="radiogroup" aria-label="Stack color"></div>
+    </div>
+
+    <div class="form-group">
+      <label for="input">Flashcards <span class="hint">(one per line — Question | Answer)</span></label>
+      <textarea id="input" placeholder="What is the capital of France? | Paris&#10;What year did WWII end? | 1945&#10;Mitochondria function | Produces ATP / energy for the cell"></textarea>
+    </div>
+
+    <button class="btn-generate" onclick="generateLink()">Generate Import Link & QR Code</button>
+
+    <div id="output">
+      <div class="result-section">
+        <h3>Import Link</h3>
+        <div class="link-box" id="linkDisplay"></div>
+        <div class="action-buttons">
+          <button class="copy-btn" id="copyBtn" onclick="copyLink()">Copy Link</button>
+          <a id="openLink" class="open-btn" href="#">Open in App →</a>
+        </div>
+        <p class="result-note">Tap "Open in App" on your iPhone, or copy the link and paste it in Safari.</p>
+      </div>
+
+      <div class="result-section" style="text-align: center;">
+        <h3>QR Code</h3>
+        <div id="qrcode"></div>
+        <p class="result-note">Scan with your iPhone camera to import directly.</p>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
   <footer>
-    <a href="/">← Back to Stacked</a> &nbsp;·&nbsp;
-    <a href="/privacy.html">Privacy Policy</a>
+    <div class="footer-inner">
+      <div class="footer-brand">Stacked</div>
+      <div class="footer-links">
+        <a href="/">Home</a>
+        <a href="/decks.html">Browse Decks</a>
+        <a href="/timer.html">Pomodoro Timer</a>
+        <a href="/import.html">Flashcard Maker</a>
+        <a href="/privacy.html">Privacy Policy</a>
+      </div>
+      <div class="footer-copy">&copy; 2026 Stacked Flashcards. All rights reserved.</div>
+    </div>
   </footer>
 
   <script>
-    // iOS-accurate RGB values for each color (matches CodableColor in app)
     const COLORS = [
       { name: 'Blue',   hex: '#007AFF', r: 0.0,   g: 0.478, b: 1.0   },
       { name: 'Purple', hex: '#AF52DE', r: 0.686, g: 0.322, b: 0.969 },
@@ -242,16 +599,23 @@
     let selectedColor = COLORS[0];
     let generatedLink = '';
 
-    // Build color swatches
     const swatchContainer = document.getElementById('swatches');
     COLORS.forEach((c, i) => {
       const div = document.createElement('div');
       div.className = 'swatch' + (i === 0 ? ' selected' : '');
       div.style.background = c.hex;
       div.title = c.name;
+      div.setAttribute('role', 'radio');
+      div.setAttribute('aria-label', c.name);
+      div.setAttribute('aria-checked', i === 0 ? 'true' : 'false');
+      div.setAttribute('tabindex', '0');
+      div.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); div.click(); }
+      });
       div.addEventListener('click', () => {
-        document.querySelectorAll('.swatch').forEach(s => s.classList.remove('selected'));
+        document.querySelectorAll('.swatch').forEach(s => { s.classList.remove('selected'); s.setAttribute('aria-checked', 'false'); });
         div.classList.add('selected');
+        div.setAttribute('aria-checked', 'true');
         selectedColor = c;
       });
       swatchContainer.appendChild(div);
@@ -288,17 +652,21 @@
       };
 
       const json = JSON.stringify(stack);
-      const encoded = btoa(unescape(encodeURIComponent(json)));
-      generatedLink = `https://stackedflashcards.com/import?stack=${encoded}`;
+      // Encode UTF-8 string to base64 (compatible with Swift's Data(base64Encoded:))
+      const utf8Bytes = new TextEncoder().encode(json);
+      let binary = '';
+      for (let i = 0; i < utf8Bytes.length; i++) {
+        binary += String.fromCharCode(utf8Bytes[i]);
+      }
+      const encoded = btoa(binary);
+      generatedLink = `https://stackedflashcards.com/import?stack=${encodeURIComponent(encoded)}`;
 
-      // Show output
       document.getElementById('linkDisplay').textContent = generatedLink;
       document.getElementById('openLink').href = generatedLink;
       document.getElementById('copyBtn').textContent = 'Copy Link';
       document.getElementById('copyBtn').classList.remove('copied');
       document.getElementById('output').style.display = 'block';
 
-      // Generate QR
       const qrcodeEl = document.getElementById('qrcode');
       qrcodeEl.innerHTML = '';
       QRCode.toCanvas(generatedLink, { width: 220, margin: 2, color: { dark: '#000', light: '#fff' } }, (err, canvas) => {
@@ -312,14 +680,26 @@
       if (!generatedLink) return;
       navigator.clipboard.writeText(generatedLink).then(() => {
         const btn = document.getElementById('copyBtn');
-        btn.textContent = '✓ Copied!';
+        btn.textContent = 'Copied!';
         btn.classList.add('copied');
         setTimeout(() => {
           btn.textContent = 'Copy Link';
           btn.classList.remove('copied');
         }, 2000);
+      }).catch(() => {
+        const ta = document.createElement('textarea');
+        ta.value = generatedLink;
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+        const btn = document.getElementById('copyBtn');
+        btn.textContent = 'Copied!';
+        btn.classList.add('copied');
+        setTimeout(() => { btn.textContent = 'Copy Link'; btn.classList.remove('copied'); }, 2000);
       });
     }
   </script>
+
 </body>
 </html>

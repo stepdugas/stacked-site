@@ -3,35 +3,265 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Pomodoro Timer - Stacked</title>
+  <title>Free Pomodoro Timer Online — Study Timer by Stacked</title>
+  <meta name="description" content="Free online Pomodoro timer for studying. 25 min focus sessions with 5 min breaks. No sign-up required. Used by students worldwide to boost focus and productivity." />
+  <meta name="keywords" content="pomodoro timer, study timer, focus timer, free pomodoro timer online, pomodoro technique, study session timer, productivity timer" />
+  <link rel="canonical" href="https://stackedflashcards.com/timer.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://stackedflashcards.com/timer.html" />
+  <meta property="og:title" content="Free Pomodoro Timer Online — Study Timer" />
+  <meta property="og:description" content="25 min focus, 5 min break. The free online study timer used by students worldwide. No sign-up needed." />
+  <meta property="og:image" content="https://stackedflashcards.com/og-image.png" />
+  <meta property="og:site_name" content="Stacked Flashcards" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Free Pomodoro Timer Online — Study Timer" />
+  <meta name="twitter:description" content="25 min focus, 5 min break. Free online study timer. No sign-up needed." />
+  <meta name="twitter:image" content="https://stackedflashcards.com/og-image.png" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Free Pomodoro Timer by Stacked",
+    "url": "https://stackedflashcards.com/timer.html",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Any",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "description": "Free online Pomodoro timer for studying. 25 minute focus sessions with 5 minute breaks. Track your study sessions and boost productivity.",
+    "browserRequirements": "Requires JavaScript"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://stackedflashcards.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Pomodoro Timer", "item": "https://stackedflashcards.com/timer.html" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the Pomodoro Technique?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The Pomodoro Technique is a time management method that breaks study time into 25-minute focused intervals (called pomodoros) separated by 5-minute breaks. After four pomodoros, you take a longer 15-30 minute break. It helps maintain focus and prevent burnout."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why is the Pomodoro Technique effective for studying?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Research shows that short, focused study sessions with breaks are more effective than marathon studying. The Pomodoro Technique combats mental fatigue, improves concentration, and helps you retain more information by working with your brain's natural attention cycles."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is this Pomodoro timer free?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes! This Pomodoro timer is completely free to use with no sign-up required. It works in any browser on desktop or mobile."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How many Pomodoro sessions should I do per day?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Most productivity experts recommend 8-12 pomodoros (4-6 hours of focused work) per day. Students studying for exams often find 6-8 pomodoros ideal. The key is consistency — four focused pomodoros beats eight distracted hours every time."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I combine the Pomodoro Technique with flashcards?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Absolutely — it's one of the most effective study combinations. Use each 25-minute pomodoro to review flashcard decks, then take your break. Stacked makes it easy by generating AI flashcards from your notes, so you can jump straight into studying."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <link rel="icon" href="/favicon.ico" sizes="32x32" />
+  <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/manifest.json" />
+
+  <!-- Preload fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
   <style>
-    *, *::before, *::after { box-sizing: border-box; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --purple: #a855f7;
+      --blue: #3b82f6;
+      --green: #4ade80;
+      --bg-primary: #09090b;
+      --bg-secondary: #0f0f12;
+      --bg-card: #16161a;
+      --border: #1e1e24;
+      --border-hover: #2e2e38;
+      --text-primary: #f4f4f5;
+      --text-secondary: #a1a1aa;
+      --text-muted: #71717a;
+      --gradient: linear-gradient(135deg, #a855f7, #6366f1, #3b82f6);
+      --gradient-subtle: linear-gradient(135deg, rgba(168,85,247,0.12), rgba(59,130,246,0.12));
+      --glow-purple: rgba(168, 85, 247, 0.15);
+      --radius: 16px;
+      --radius-sm: 10px;
+      --radius-lg: 24px;
+    }
+
+    html { scroll-behavior: smooth; }
 
     body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      background: #0b0b0b;
-      color: white;
-      padding: 48px 20px 80px;
+      background: var(--bg-primary);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      color: var(--text-primary);
       text-align: center;
+      -webkit-font-smoothing: antialiased;
       min-height: 100vh;
-      margin: 0;
+      overflow-x: hidden;
     }
 
-    h1 {
-      font-size: 2em;
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    /* ── Nav ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(9, 9, 11, 0.8);
+      backdrop-filter: blur(20px) saturate(180%);
+      -webkit-backdrop-filter: blur(20px) saturate(180%);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 32px;
+      height: 64px;
+    }
+
+    .nav-logo {
+      font-size: 1.2rem;
       font-weight: 800;
-      background: linear-gradient(to right, #a855f7, #3b82f6);
+      background: var(--gradient);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      margin: 0 0 6px;
+      text-decoration: none;
+      letter-spacing: -0.02em;
     }
 
-    .subtitle {
-      color: #555;
+    .nav-links { display: flex; gap: 4px; align-items: center; }
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.875rem;
+      font-weight: 500;
+      padding: 8px 14px;
+      border-radius: var(--radius-sm);
+      transition: all 0.2s ease;
+    }
+    .nav-links a:hover { color: var(--text-primary); background: rgba(255,255,255,0.05); }
+    .nav-links a.active { color: var(--text-primary); }
+    .nav-cta {
+      background: var(--gradient) !important;
+      color: white !important;
+      padding: 8px 18px !important;
+      border-radius: var(--radius-sm) !important;
+      font-weight: 600 !important;
+      font-size: 0.85rem !important;
+      transition: opacity 0.2s, transform 0.2s !important;
+    }
+    .nav-cta:hover { opacity: 0.9 !important; transform: translateY(-1px) !important; }
+
+    /* ── Timer hero ── */
+    .timer-hero {
+      position: relative;
+      padding: 60px 24px 0;
+    }
+
+    .timer-hero::before {
+      content: '';
+      position: absolute;
+      top: -80px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 600px;
+      height: 400px;
+      background: radial-gradient(ellipse, var(--glow-purple) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .timer-hero > * { position: relative; z-index: 1; }
+
+    .timer-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(74, 222, 128, 0.1);
+      border: 1px solid rgba(74, 222, 128, 0.2);
+      color: var(--green);
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 5px 14px;
+      border-radius: 100px;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .timer-hero h1 {
+      font-size: clamp(2rem, 5vw, 2.8rem);
+      font-weight: 900;
+      letter-spacing: -0.04em;
+      margin-bottom: 8px;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .timer-subtitle {
+      color: var(--text-muted);
       font-size: 0.88rem;
-      margin-bottom: 48px;
       letter-spacing: 0.06em;
       text-transform: uppercase;
+      font-weight: 600;
+      margin-bottom: 48px;
+    }
+
+    /* ── Timer Container ── */
+    .timer-container {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 0 24px 60px;
     }
 
     /* ── Ring ── */
@@ -44,24 +274,25 @@
     .ring-wrap svg {
       transform: rotate(-90deg);
       display: block;
+      filter: drop-shadow(0 0 20px rgba(168, 85, 247, 0.15));
     }
 
     .ring-track {
       fill: none;
-      stroke: #1a1a1a;
-      stroke-width: 10;
+      stroke: var(--border);
+      stroke-width: 8;
     }
 
     .ring-progress {
       fill: none;
-      stroke-width: 10;
+      stroke-width: 8;
       stroke-linecap: round;
       stroke: url(#focusGrad);
       transition: stroke-dashoffset 0.9s linear, stroke 0.5s ease;
     }
 
     .ring-progress.break-ring {
-      stroke: #4ade80;
+      stroke: var(--green);
     }
 
     .ring-center {
@@ -71,122 +302,194 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: 2px;
+      gap: 4px;
     }
 
     .timer-display {
-      font-size: 3.4em;
-      font-weight: 700;
-      letter-spacing: -2px;
+      font-size: 3.6em;
+      font-weight: 800;
+      letter-spacing: -3px;
       font-variant-numeric: tabular-nums;
       line-height: 1;
     }
 
     .mode-label {
-      font-size: 0.75rem;
-      font-weight: 600;
+      font-size: 0.72rem;
+      font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: #777;
+      letter-spacing: 0.14em;
+      color: var(--text-muted);
       transition: color 0.4s;
     }
-    .mode-label.break-mode { color: #4ade80; }
+    .mode-label.break-mode { color: var(--green); }
+
+    /* ── Session dots ── */
+    .session-dots {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      margin-bottom: 32px;
+    }
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.06);
+      border: 1.5px solid var(--border);
+      transition: all 0.3s;
+    }
+    .dot.done {
+      background: var(--purple);
+      border-color: var(--purple);
+      box-shadow: 0 0 8px rgba(168, 85, 247, 0.4);
+    }
 
     /* ── Controls ── */
     .controls {
       display: flex;
       gap: 12px;
       justify-content: center;
-      margin-bottom: 40px;
+      margin-bottom: 48px;
     }
 
     .btn-start {
-      background: linear-gradient(to right, #a855f7, #3b82f6);
+      background: var(--gradient);
       color: white;
       border: none;
-      padding: 14px 36px;
-      border-radius: 50px;
+      padding: 15px 40px;
+      border-radius: 100px;
       font-size: 1rem;
       font-weight: 700;
+      font-family: inherit;
       cursor: pointer;
-      min-width: 120px;
-      transition: opacity 0.2s, transform 0.1s;
+      min-width: 130px;
+      transition: opacity 0.2s, transform 0.15s, box-shadow 0.2s;
+      box-shadow: 0 4px 20px rgba(168, 85, 247, 0.25);
     }
-    .btn-start:hover { opacity: 0.85; }
+    .btn-start:hover { opacity: 0.9; transform: translateY(-2px); box-shadow: 0 8px 30px rgba(168, 85, 247, 0.3); }
     .btn-start:active { transform: scale(0.97); }
 
     .btn-reset {
       background: transparent;
-      color: #555;
-      border: 1px solid #2a2a2a;
-      padding: 14px 24px;
-      border-radius: 50px;
+      color: var(--text-muted);
+      border: 1px solid var(--border);
+      padding: 15px 28px;
+      border-radius: 100px;
       font-size: 1rem;
       font-weight: 600;
+      font-family: inherit;
       cursor: pointer;
-      transition: border-color 0.2s, color 0.2s;
+      transition: all 0.2s;
     }
-    .btn-reset:hover { border-color: #444; color: #888; }
+    .btn-reset:hover { border-color: var(--border-hover); color: var(--text-secondary); }
 
-    /* ── Session dots ── */
-    .session-dots {
-      display: flex;
-      gap: 8px;
-      justify-content: center;
-      margin-bottom: 40px;
+    /* ── Tip card ── */
+    .tip-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px;
+      margin-bottom: 32px;
+      text-align: left;
     }
-    .dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: #222;
-      border: 1px solid #333;
-      transition: background 0.3s;
-    }
-    .dot.done { background: #a855f7; border-color: #a855f7; }
 
-    /* ── Note ── */
-    .note {
-      font-size: 0.82rem;
-      color: #444;
-      max-width: 320px;
-      margin: 0 auto 52px;
+    .tip-card p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
       line-height: 1.7;
+    }
+
+    .tip-card strong {
+      color: var(--text-secondary);
     }
 
     /* ── App CTA ── */
     .app-cta {
-      background: #111;
-      border: 1px solid #1e1e2e;
-      border-radius: 18px;
-      padding: 28px 24px;
-      max-width: 460px;
-      margin: 0 auto;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 32px 24px;
+      margin-bottom: 32px;
+      position: relative;
+      overflow: hidden;
     }
+
+    .app-cta::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: var(--gradient-subtle);
+      opacity: 0.5;
+    }
+
+    .app-cta > * { position: relative; z-index: 1; }
+
     .app-cta p {
       margin: 0 0 16px;
       font-size: 1rem;
-      color: #999;
-      line-height: 1.5;
+      color: var(--text-secondary);
+      line-height: 1.6;
     }
-    .app-cta strong {
-      background: linear-gradient(to right, #a855f7, #3b82f6);
+
+    .app-cta .gradient-text {
+      background: var(--gradient);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       font-weight: 700;
     }
+
     .app-cta a {
       display: inline-block;
-      background: linear-gradient(to right, #a855f7, #3b82f6);
+      background: var(--gradient);
       color: white;
-      padding: 12px 26px;
-      border-radius: 12px;
+      padding: 13px 28px;
+      border-radius: 14px;
       text-decoration: none;
       font-weight: 600;
       font-size: 0.95rem;
-      transition: opacity 0.2s;
+      transition: opacity 0.2s, transform 0.2s;
+      box-shadow: 0 4px 20px rgba(168, 85, 247, 0.2);
     }
-    .app-cta a:hover { opacity: 0.85; }
+    .app-cta a:hover { opacity: 0.9; transform: translateY(-2px); }
+
+    /* ── FAQ Section (SEO content) ── */
+    .faq-section {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 60px 24px 80px;
+      text-align: left;
+    }
+
+    .faq-section h2 {
+      font-size: 1.5rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 28px;
+      text-align: center;
+      color: var(--text-primary);
+    }
+
+    .faq-item {
+      border-bottom: 1px solid var(--border);
+      padding: 20px 0;
+    }
+
+    .faq-item:first-of-type {
+      border-top: 1px solid var(--border);
+    }
+
+    .faq-item h3 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 10px;
+    }
+
+    .faq-item p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
 
     /* ── Toast ── */
     .toast {
@@ -194,19 +497,19 @@
       bottom: 32px;
       left: 50%;
       transform: translateX(-50%) translateY(16px);
-      background: #1e1e2e;
-      border: 1px solid #3a3a5a;
+      background: var(--bg-card);
+      border: 1px solid var(--border-hover);
       color: white;
-      padding: 14px 26px;
-      border-radius: 50px;
-      font-size: 0.95rem;
+      padding: 14px 28px;
+      border-radius: 100px;
+      font-size: 0.92rem;
       font-weight: 600;
       opacity: 0;
       transition: opacity 0.3s ease, transform 0.3s ease;
       pointer-events: none;
       white-space: nowrap;
-      z-index: 100;
-      box-shadow: 0 8px 32px rgba(0,0,0,0.6);
+      z-index: 1000;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.5);
     }
     .toast.show {
       opacity: 1;
@@ -215,62 +518,239 @@
 
     /* ── Footer ── */
     footer {
-      margin-top: 48px;
-      font-size: 0.78em;
-      color: #333;
+      padding: 40px 24px;
+      border-top: 1px solid var(--border);
     }
-    footer a { color: #444; text-decoration: none; margin: 0 8px; }
-    footer a:hover { color: #777; }
+
+    .footer-inner {
+      max-width: 740px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .footer-brand {
+      font-size: 1rem;
+      font-weight: 800;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.82rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--text-secondary); }
+
+    .footer-copy {
+      width: 100%;
+      text-align: center;
+      margin-top: 24px;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    @media (max-width: 640px) {
+      nav { padding: 0 16px; }
+      .nav-links a:not(.nav-cta) { display: none; }
+      .nav-hamburger { display: flex; }
+      .timer-container { padding: 0 16px 60px; }
+      .faq-section { padding: 40px 16px 60px; }
+      .footer-inner { justify-content: center; text-align: center; }
+      .footer-links { justify-content: center; }
+    }
+
+    /* ── Hamburger menu ── */
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+      z-index: 1002;
+    }
+    .nav-hamburger span {
+      display: block;
+      width: 20px;
+      height: 2px;
+      background: var(--text-secondary, #a1a1aa);
+      border-radius: 2px;
+      transition: all 0.3s;
+    }
+    .nav-mobile {
+      display: none;
+      position: fixed;
+      inset: 0;
+      top: 64px;
+      background: rgba(9, 9, 11, 0.98);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 24px;
+      gap: 8px;
+      z-index: 999;
+    }
+    .nav-mobile.open { display: flex; }
+    .nav-mobile a {
+      color: #a1a1aa;
+      text-decoration: none;
+      font-size: 1.1rem;
+      font-weight: 600;
+      padding: 14px 24px;
+      border-radius: 12px;
+      transition: all 0.2s;
+      width: 100%;
+      max-width: 320px;
+      text-align: center;
+    }
+    .nav-mobile a:hover { color: #f4f4f5; background: rgba(255,255,255,0.05); }
+    .nav-mobile .mobile-cta {
+      background: linear-gradient(135deg, #a855f7, #6366f1, #3b82f6);
+      color: white;
+      margin-top: 8px;
+    }
   </style>
 </head>
 <body>
 
-  <h1>Pomodoro Timer</h1>
-  <p class="subtitle">25 min focus &nbsp;·&nbsp; 5 min break &nbsp;·&nbsp; repeat</p>
+  <nav>
+    <a class="nav-logo" href="/">Stacked</a>
+    <div class="nav-links">
+      <a href="/">Home</a>
+      <a href="/decks.html">Decks</a>
+      <a href="/timer.html" class="active">Timer</a>
+      <a href="https://apps.apple.com/app/id6744585549" target="_blank" rel="noopener" class="nav-cta">Download Free</a>
+    </div>
+    <button class="nav-hamburger" onclick="document.querySelector('.nav-mobile').classList.toggle('open')" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
 
-  <!-- Circular ring -->
-  <div class="ring-wrap">
-    <svg id="ringsvg" width="220" height="220" viewBox="0 0 220 220">
-      <defs>
-        <linearGradient id="focusGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-          <stop offset="0%" stop-color="#a855f7"/>
-          <stop offset="100%" stop-color="#3b82f6"/>
-        </linearGradient>
-      </defs>
-      <circle class="ring-track" cx="110" cy="110" r="98"/>
-      <circle class="ring-progress" id="ringProgress" cx="110" cy="110" r="98"/>
-    </svg>
-    <div class="ring-center">
-      <div class="timer-display" id="timerDisplay">25:00</div>
-      <div class="mode-label" id="modeLabel">Focus</div>
+  <div class="nav-mobile">
+    <a href="/">Home</a>
+    <a href="/decks.html">Browse Decks</a>
+    <a href="/timer.html">Pomodoro Timer</a>
+    <a href="/import.html">Flashcard Maker</a>
+    <a href="/study-tips.html">Study Tips</a>
+    <a href="/grade-calculator.html">Grade Calculator</a>
+    <a href="https://apps.apple.com/app/id6744585549" target="_blank" rel="noopener" class="mobile-cta">Download Free</a>
+  </div>
+
+  <main>
+
+  <div class="timer-hero">
+    <div class="timer-badge">Free — No Sign Up Required</div>
+    <h1>Pomodoro Study Timer</h1>
+    <p class="timer-subtitle">25 min focus &nbsp;·&nbsp; 5 min break &nbsp;·&nbsp; repeat</p>
+  </div>
+
+  <div class="timer-container">
+
+    <!-- Circular ring -->
+    <div class="ring-wrap">
+      <svg id="ringsvg" width="240" height="240" viewBox="0 0 240 240">
+        <defs>
+          <linearGradient id="focusGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#a855f7"/>
+            <stop offset="100%" stop-color="#3b82f6"/>
+          </linearGradient>
+        </defs>
+        <circle class="ring-track" cx="120" cy="120" r="104"/>
+        <circle class="ring-progress" id="ringProgress" cx="120" cy="120" r="104"/>
+      </svg>
+      <div class="ring-center">
+        <div class="timer-display" id="timerDisplay" aria-live="polite" aria-atomic="true">25:00</div>
+        <div class="mode-label" id="modeLabel">Focus</div>
+      </div>
+    </div>
+
+    <!-- Session dots -->
+    <div class="session-dots">
+      <div class="dot" id="dot0"></div>
+      <div class="dot" id="dot1"></div>
+      <div class="dot" id="dot2"></div>
+      <div class="dot" id="dot3"></div>
+    </div>
+
+    <div class="controls">
+      <button class="btn-start" id="startBtn" onclick="toggleTimer()">Start</button>
+      <button class="btn-reset" onclick="resetTimer()">Reset</button>
+    </div>
+
+    <!-- Study tip -->
+    <div class="tip-card">
+      <p><strong>Study tip:</strong> Consistent 25-minute focus sessions beat marathon study crams. Take your breaks — your brain consolidates what you just learned during rest.</p>
+    </div>
+
+    <!-- App CTA -->
+    <div class="app-cta">
+      <p>Studying? Use <span class="gradient-text">Stacked</span> to turn your notes into AI flashcards and study smarter.</p>
+      <a href="https://apps.apple.com/app/id6744585549" target="_blank" rel="noopener">Get Stacked Free →</a>
+    </div>
+
+  </div>
+
+  <!-- FAQ section for SEO -->
+  <div class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+      <h3>What is the Pomodoro Technique?</h3>
+      <p>The Pomodoro Technique is a time management method developed by Francesco Cirillo. It breaks work into 25-minute focused intervals (called "pomodoros") separated by 5-minute breaks. After four pomodoros, you take a longer 15-30 minute break. It helps maintain focus and prevent burnout during study sessions.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Why is the Pomodoro Technique effective for studying?</h3>
+      <p>Research shows that short, focused study sessions with breaks are more effective than marathon cramming. The Pomodoro Technique works with your brain's natural attention cycles — combating mental fatigue, improving concentration, and helping you retain more information over time.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Is this Pomodoro timer free?</h3>
+      <p>Yes! This Pomodoro timer is completely free with no sign-up required. It works in any browser on desktop or mobile. Just hit Start and begin your focus session.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>How many Pomodoro sessions should I do per day?</h3>
+      <p>Most productivity experts recommend 8-12 pomodoros (4-6 hours of focused work) per day. Students studying for exams often find 6-8 pomodoros ideal. The key is consistency — four focused pomodoros beats eight distracted hours every time.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Can I combine the Pomodoro Technique with flashcards?</h3>
+      <p>Absolutely — it's one of the most effective study combinations. Use each 25-minute pomodoro to review flashcard decks, then take your break. <a href="https://apps.apple.com/app/id6744585549" target="_blank" rel="noopener" style="color: var(--purple); text-decoration: none; font-weight: 600;">Stacked</a> makes it easy by generating AI flashcards from your notes, so you can jump straight into studying.</p>
     </div>
   </div>
 
-  <!-- Session dots (4 pomodoros) -->
-  <div class="session-dots">
-    <div class="dot" id="dot0"></div>
-    <div class="dot" id="dot1"></div>
-    <div class="dot" id="dot2"></div>
-    <div class="dot" id="dot3"></div>
-  </div>
+  </main>
 
-  <div class="controls">
-    <button class="btn-start" id="startBtn" onclick="toggleTimer()">Start</button>
-    <button class="btn-reset" onclick="resetTimer()">Reset</button>
-  </div>
-
-  <p class="note">Consistent focus sessions beat marathon study crams. Take your breaks — your brain needs them.</p>
-
-  <!-- App CTA -->
-  <div class="app-cta">
-    <p>Studying? Use <strong>Stacked</strong> to turn your notes into AI flashcards.</p>
-    <a href="https://apps.apple.com/app/id6744585549" target="_blank" rel="noopener">Get Stacked Free →</a>
-  </div>
-
+  <!-- Footer -->
   <footer>
-    <a href="/">← Stacked</a>
-    <a href="/import.html">Import Tool</a>
-    <a href="/privacy.html">Privacy</a>
+    <div class="footer-inner">
+      <div class="footer-brand">Stacked</div>
+      <div class="footer-links">
+        <a href="/">Home</a>
+        <a href="/decks.html">Browse Decks</a>
+        <a href="/timer.html">Pomodoro Timer</a>
+        <a href="/import.html">Flashcard Maker</a>
+        <a href="/privacy.html">Privacy Policy</a>
+      </div>
+      <div class="footer-copy">&copy; 2026 Stacked Flashcards. All rights reserved.</div>
+    </div>
   </footer>
 
   <div class="toast" id="toast"></div>
@@ -278,7 +758,7 @@
   <script>
     const FOCUS_SECS = 25 * 60;
     const BREAK_SECS = 5 * 60;
-    const CIRCUMFERENCE = 2 * Math.PI * 98; // r=98
+    const CIRCUMFERENCE = 2 * Math.PI * 104;
 
     let secondsLeft = FOCUS_SECS;
     let totalSecs = FOCUS_SECS;
@@ -294,19 +774,17 @@
       const mins = String(Math.floor(secondsLeft / 60)).padStart(2, '0');
       const secs = String(secondsLeft % 60).padStart(2, '0');
       document.getElementById('timerDisplay').textContent = `${mins}:${secs}`;
-      document.title = `${mins}:${secs} — ${onBreak ? 'Break' : 'Focus'} · Stacked`;
+      document.title = `${mins}:${secs} — ${onBreak ? 'Break' : 'Focus'} · Stacked Pomodoro Timer`;
 
       const label = document.getElementById('modeLabel');
       label.textContent = onBreak ? 'Break' : 'Focus';
       label.className = 'mode-label' + (onBreak ? ' break-mode' : '');
 
-      // Ring progress
       const progress = secondsLeft / totalSecs;
       const offset = CIRCUMFERENCE * (1 - progress);
       ring.style.strokeDashoffset = offset;
       ring.className = 'ring-progress' + (onBreak ? ' break-ring' : '');
 
-      // Session dots
       for (let i = 0; i < 4; i++) {
         document.getElementById(`dot${i}`).className = 'dot' + (i < completedPomodoros % 4 ? ' done' : '');
       }
@@ -339,9 +817,9 @@
 
             if (!onBreak) {
               completedPomodoros++;
-              showToast('🎉 Focus session done! Take a break.');
+              showToast('Focus session done! Take a break.');
             } else {
-              showToast('⏰ Break over — back to it!');
+              showToast('Break over — back to it!');
             }
 
             onBreak = !onBreak;
@@ -367,5 +845,6 @@
 
     updateDisplay();
   </script>
+
 </body>
 </html>

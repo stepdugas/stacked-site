@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Free Computer Science Basics Flashcards | Stacked</title>
+  <meta name="description" content="Free Computer Science flashcards. Key concepts in data structures, algorithms, and programming. Study online or import into Stacked." />
+  <meta name="keywords" content="computer science flashcards, CS 101, programming flashcards, data structures, algorithms" />
+  <link rel="canonical" href="https://stackedflashcards.com/decks/computer-science-basics.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://stackedflashcards.com/decks/computer-science-basics.html" />
+  <meta property="og:title" content="Free Computer Science Basics Flashcards" />
+  <meta property="og:description" content="Free Computer Science flashcards. Key concepts in data structures, algorithms, and programming. Study online or import into Stacked." />
+  <meta property="og:image" content="https://stackedflashcards.com/og-image.png" />
+  <meta property="og:site_name" content="Stacked Flashcards" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Free Computer Science Basics Flashcards" />
+  <meta name="twitter:description" content="Free Computer Science flashcards. Key concepts in data structures, algorithms, and programming. Study online or import into Stacked." />
+  <meta name="twitter:image" content="https://stackedflashcards.com/og-image.png" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LearningResource",
+    "name": "Computer Science Basics",
+    "description": "Fundamental computer science concepts including data structures, algorithms, and programming basics.",
+    "educationalLevel": "Beginner",
+    "learningResourceType": "Flashcards",
+    "isAccessibleForFree": true,
+    "url": "https://stackedflashcards.com/decks/computer-science-basics.html",
+    "provider": { "@type": "Organization", "name": "Stacked Flashcards", "url": "https://stackedflashcards.com" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://stackedflashcards.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Decks", "item": "https://stackedflashcards.com/decks.html" },
+      { "@type": "ListItem", "position": 3, "name": "Computer Science Basics", "item": "https://stackedflashcards.com/decks/computer-science-basics.html" }
+    ]
+  }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.3/build/qrcode.min.js"></script>
+  <link rel="icon" href="/favicon.ico" sizes="32x32" />
+  <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/manifest.json" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--purple:#a855f7;--blue:#3b82f6;--bg-primary:#09090b;--bg-secondary:#0f0f12;--bg-card:#16161a;--border:#1e1e24;--border-hover:#2e2e38;--text-primary:#f4f4f5;--text-secondary:#a1a1aa;--text-muted:#71717a;--gradient:linear-gradient(135deg,#a855f7,#6366f1,#3b82f6);--gradient-subtle:linear-gradient(135deg,rgba(168,85,247,0.12),rgba(59,130,246,0.12));--glow-purple:rgba(168,85,247,0.15);--radius:16px;--radius-sm:10px;--radius-lg:24px}
+    html{scroll-behavior:smooth}
+    body{background:var(--bg-primary);font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:var(--text-primary);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+    body::before{content:'';position:fixed;inset:0;background:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");pointer-events:none;z-index:1}
+    nav{position:sticky;top:0;z-index:1000;background:rgba(9,9,11,0.8);backdrop-filter:blur(20px) saturate(180%);-webkit-backdrop-filter:blur(20px) saturate(180%);border-bottom:1px solid rgba(255,255,255,0.06);display:flex;align-items:center;justify-content:space-between;padding:0 32px;height:64px}
+    .nav-logo{font-size:1.2rem;font-weight:800;background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;text-decoration:none;letter-spacing:-0.02em}
+    .nav-links{display:flex;gap:4px;align-items:center}
+    .nav-links a{color:var(--text-muted);text-decoration:none;font-size:0.875rem;font-weight:500;padding:8px 14px;border-radius:var(--radius-sm);transition:all 0.2s ease}
+    .nav-links a:hover{color:var(--text-primary);background:rgba(255,255,255,0.05)}
+    .nav-cta{background:var(--gradient)!important;color:white!important;padding:8px 18px!important;border-radius:var(--radius-sm)!important;font-weight:600!important;font-size:0.85rem!important}
+    .nav-cta:hover{opacity:0.9!important}
+    main{max-width:720px;margin:0 auto;padding:48px 24px 80px}
+    .page-header{text-align:center;margin-bottom:40px;position:relative}
+    .page-header::before{content:'';position:absolute;top:-100px;left:50%;transform:translateX(-50%);width:500px;height:300px;background:radial-gradient(ellipse,var(--glow-purple) 0%,transparent 70%);pointer-events:none;z-index:0}
+    .page-header>*{position:relative;z-index:1}
+    .page-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(74,222,128,0.1);border:1px solid rgba(74,222,128,0.2);color:#4ade80;font-size:0.72rem;font-weight:700;padding:5px 14px;border-radius:100px;margin-bottom:16px;text-transform:uppercase;letter-spacing:0.06em}
+    .cat-badge{background:rgba(168,85,247,0.1);border:1px solid rgba(168,85,247,0.2);color:var(--purple);margin-right:8px}
+    .page-header h1{font-size:clamp(1.8rem,4vw,2.4rem);font-weight:900;letter-spacing:-0.03em;margin-bottom:10px;background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+    .page-desc{color:var(--text-secondary);font-size:1rem;line-height:1.6;max-width:560px;margin:0 auto 24px}
+    .deck-stats{display:flex;gap:24px;justify-content:center;margin-bottom:32px;font-size:0.82rem;color:var(--text-muted)}
+    .deck-stats span{font-weight:600;color:var(--text-secondary)}
+    .import-bar{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:24px;margin-bottom:40px;text-align:center}
+    .import-bar p{color:var(--text-secondary);font-size:0.92rem;margin-bottom:16px}
+    .btn-import{display:inline-block;background:var(--gradient);color:white;padding:14px 32px;border-radius:14px;text-decoration:none;font-weight:700;font-size:1rem;border:none;cursor:pointer;font-family:inherit;transition:opacity 0.2s,transform 0.2s;box-shadow:0 4px 20px rgba(168,85,247,0.25)}
+    .btn-import:hover{opacity:0.9;transform:translateY(-2px)}
+    .btn-secondary{display:inline-block;background:rgba(255,255,255,0.05);color:var(--text-secondary);border:1px solid var(--border);padding:10px 20px;border-radius:var(--radius-sm);text-decoration:none;font-weight:600;font-size:0.85rem;margin-left:10px;cursor:pointer;font-family:inherit;transition:all 0.2s}
+    .btn-secondary:hover{border-color:var(--border-hover);color:var(--text-primary)}
+    #qrcode{display:none;justify-content:center;margin-top:16px}
+    #qrcode canvas{border-radius:var(--radius-sm)}
+    .cards-section h2{font-size:1.2rem;font-weight:700;margin-bottom:20px;color:var(--text-primary)}
+    .card-list{display:flex;flex-direction:column;gap:8px}
+    .card-item{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-sm);padding:16px 18px;display:grid;grid-template-columns:1fr 1fr;gap:16px;transition:border-color 0.2s}
+    .card-item:hover{border-color:var(--border-hover)}
+    .card-front{font-weight:600;font-size:0.9rem;color:var(--text-primary)}
+    .card-back{font-size:0.88rem;color:var(--text-muted);line-height:1.5}
+    .card-divider{width:1px;background:var(--border)}
+    .app-cta{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:32px 24px;margin-top:48px;text-align:center;position:relative;overflow:hidden}
+    .app-cta::before{content:'';position:absolute;inset:0;background:var(--gradient-subtle);opacity:0.5}
+    .app-cta>*{position:relative;z-index:1}
+    .app-cta p{color:var(--text-secondary);font-size:1rem;margin-bottom:16px;line-height:1.6}
+    .app-cta .g{background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-weight:700}
+    .app-cta a{display:inline-block;background:var(--gradient);color:white;padding:13px 28px;border-radius:14px;text-decoration:none;font-weight:600;font-size:0.95rem;transition:opacity 0.2s}
+    .app-cta a:hover{opacity:0.9}
+    footer{padding:40px 24px;border-top:1px solid var(--border)}
+    .footer-inner{max-width:740px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+    .footer-brand{font-size:1rem;font-weight:800;background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+    .footer-links{display:flex;gap:24px;flex-wrap:wrap}
+    .footer-links a{color:var(--text-muted);text-decoration:none;font-size:0.82rem;font-weight:500;transition:color 0.2s}
+    .footer-links a:hover{color:var(--text-secondary)}
+    .footer-copy{width:100%;text-align:center;margin-top:24px;font-size:0.75rem;color:var(--text-muted)}
+    @media(max-width:640px){nav{padding:0 16px}.nav-links a:not(.nav-cta){display:none}main{padding:32px 16px 60px}.card-item{grid-template-columns:1fr;gap:6px}.footer-inner{justify-content:center;text-align:center}.footer-links{justify-content:center}}
+
+    /* ── Hamburger menu ── */
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+      z-index: 1002;
+    }
+    .nav-hamburger span {
+      display: block;
+      width: 20px;
+      height: 2px;
+      background: var(--text-secondary, #a1a1aa);
+      border-radius: 2px;
+      transition: all 0.3s;
+    }
+    .nav-mobile {
+      display: none;
+      position: fixed;
+      inset: 0;
+      top: 64px;
+      background: rgba(9, 9, 11, 0.98);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 24px;
+      gap: 8px;
+      z-index: 999;
+    }
+    .nav-mobile.open { display: flex; }
+    .nav-mobile a {
+      color: #a1a1aa;
+      text-decoration: none;
+      font-size: 1.1rem;
+      font-weight: 600;
+      padding: 14px 24px;
+      border-radius: 12px;
+      transition: all 0.2s;
+      width: 100%;
+      max-width: 320px;
+      text-align: center;
+    }
+    .nav-mobile a:hover { color: #f4f4f5; background: rgba(255,255,255,0.05); }
+    .nav-mobile .mobile-cta {
+      background: linear-gradient(135deg, #a855f7, #6366f1, #3b82f6);
+      color: white;
+      margin-top: 8px;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a class="nav-logo" href="/">Stacked</a>
+    <div class="nav-links">
+      <a href="/">Home</a>
+      <a href="/decks.html">Decks</a>
+      <a href="/timer.html">Timer</a>
+      <a href="https://apps.apple.com/app/id6744585549" target="_blank" rel="noopener" class="nav-cta">Download Free</a>
+    </div>
+    <button class="nav-hamburger" onclick="document.querySelector('.nav-mobile').classList.toggle('open')" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="nav-mobile">
+    <a href="/">Home</a>
+    <a href="/decks.html">Browse Decks</a>
+    <a href="/timer.html">Pomodoro Timer</a>
+    <a href="/import.html">Flashcard Maker</a>
+    <a href="/study-tips.html">Study Tips</a>
+    <a href="/grade-calculator.html">Grade Calculator</a>
+    <a href="https://apps.apple.com/app/id6744585549" target="_blank" rel="noopener" class="mobile-cta">Download Free</a>
+  </div>
+
+  <main>
+    <div class="page-header">
+      <span class="page-badge cat-badge">College</span>
+      <span class="page-badge">30 Cards — Free</span>
+      <h1>Computer Science Basics</h1>
+      <p class="page-desc">Fundamental computer science concepts including data structures, algorithms, and programming basics.</p>
+    </div>
+
+    <div class="import-bar">
+      <p>Import this deck directly into the Stacked app</p>
+      <button class="btn-import" onclick="importDeck()">Import to Stacked</button>
+      <button class="btn-secondary" onclick="toggleQR(event)">Show QR Code</button>
+      <div id="qrcode"></div>
+    </div>
+
+    <div class="cards-section">
+      <h2>All 30 Cards</h2>
+      <div class="card-list">
+        <div class="card-item"><div class="card-front">Algorithm</div><div class="card-back">A step-by-step procedure for solving a problem or accomplishing a task</div></div>
+        <div class="card-item"><div class="card-front">Variable</div><div class="card-back">A named storage location in memory that holds a value; can change during program execution</div></div>
+        <div class="card-item"><div class="card-front">Array</div><div class="card-back">An ordered collection of elements stored in contiguous memory; accessed by index; fixed size</div></div>
+        <div class="card-item"><div class="card-front">Loop</div><div class="card-back">Code that repeats execution; types: for loop (known iterations), while loop (condition-based)</div></div>
+        <div class="card-item"><div class="card-front">Function</div><div class="card-back">A reusable block of code that performs a specific task; takes inputs (parameters), returns output</div></div>
+        <div class="card-item"><div class="card-front">Conditional Statement</div><div class="card-back">Code that executes based on a condition; if/else/else if; controls program flow</div></div>
+        <div class="card-item"><div class="card-front">Boolean</div><div class="card-back">A data type with only two values: true or false; used in conditions and logic</div></div>
+        <div class="card-item"><div class="card-front">String</div><div class="card-back">A sequence of characters (text); immutable in many languages; enclosed in quotes</div></div>
+        <div class="card-item"><div class="card-front">Integer</div><div class="card-back">A whole number data type; no decimal point; positive, negative, or zero</div></div>
+        <div class="card-item"><div class="card-front">Binary</div><div class="card-back">Base-2 number system using 0s and 1s; how computers store all data</div></div>
+        <div class="card-item"><div class="card-front">Big O Notation</div><div class="card-back">Describes algorithm efficiency; O(1) constant, O(n) linear, O(n²) quadratic, O(log n) logarithmic</div></div>
+        <div class="card-item"><div class="card-front">Stack</div><div class="card-back">LIFO data structure (Last In, First Out); push adds, pop removes; like a stack of plates</div></div>
+        <div class="card-item"><div class="card-front">Queue</div><div class="card-back">FIFO data structure (First In, First Out); enqueue adds, dequeue removes; like a line of people</div></div>
+        <div class="card-item"><div class="card-front">Linked List</div><div class="card-back">Data structure where each element points to the next; dynamic size; no contiguous memory required</div></div>
+        <div class="card-item"><div class="card-front">Hash Table</div><div class="card-back">Key-value data structure; O(1) average lookup; handles collisions; used in dictionaries/maps</div></div>
+        <div class="card-item"><div class="card-front">Binary Tree</div><div class="card-back">Tree where each node has at most 2 children; binary search tree: left &lt; parent &lt; right</div></div>
+        <div class="card-item"><div class="card-front">Recursion</div><div class="card-back">A function that calls itself; needs a base case to stop; used for trees, fractals, divide-and-conquer</div></div>
+        <div class="card-item"><div class="card-front">Sorting Algorithms</div><div class="card-back">Bubble sort O(n²), merge sort O(n log n), quick sort O(n log n) avg; organize data in order</div></div>
+        <div class="card-item"><div class="card-front">Binary Search</div><div class="card-back">Efficient search on sorted data; divides in half each step; O(log n) time complexity</div></div>
+        <div class="card-item"><div class="card-front">Object-Oriented Programming</div><div class="card-back">Programming paradigm using objects with properties and methods; classes, inheritance, encapsulation, polymorphism</div></div>
+        <div class="card-item"><div class="card-front">Class</div><div class="card-back">A blueprint for creating objects; defines properties (attributes) and methods (behaviors)</div></div>
+        <div class="card-item"><div class="card-front">Inheritance</div><div class="card-back">A class can inherit properties and methods from a parent class; promotes code reuse</div></div>
+        <div class="card-item"><div class="card-front">API</div><div class="card-back">Application Programming Interface; defines how software components interact; request/response pattern</div></div>
+        <div class="card-item"><div class="card-front">HTTP Methods</div><div class="card-back">GET (retrieve), POST (create), PUT (update), DELETE (remove); used in web APIs</div></div>
+        <div class="card-item"><div class="card-front">Database</div><div class="card-back">Organized collection of data; SQL (relational tables) vs NoSQL (documents, key-value, graph)</div></div>
+        <div class="card-item"><div class="card-front">Git</div><div class="card-back">Version control system; tracks code changes; commands: commit, push, pull, branch, merge</div></div>
+        <div class="card-item"><div class="card-front">Compiler vs Interpreter</div><div class="card-back">Compiler: translates entire program before running; Interpreter: translates line by line during execution</div></div>
+        <div class="card-item"><div class="card-front">Bug</div><div class="card-back">An error in code; syntax error (won&#x27;t compile), logic error (wrong result), runtime error (crashes)</div></div>
+        <div class="card-item"><div class="card-front">Testing</div><div class="card-back">Verifying code works correctly; unit tests (individual functions), integration tests (components together)</div></div>
+        <div class="card-item"><div class="card-front">Time Complexity</div><div class="card-back">How running time grows with input size; constant O(1) &lt; logarithmic O(log n) &lt; linear O(n) &lt; quadratic O(n²)</div></div>
+      </div>
+    </div>
+
+    <div class="app-cta">
+      <p>Study this deck on the go with <span class="g">Stacked</span> — the AI-powered flashcard app.</p>
+      <a href="https://apps.apple.com/app/id6744585549" target="_blank" rel="noopener">Get Stacked Free →</a>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">Stacked</div>
+      <div class="footer-links">
+        <a href="/">Home</a>
+        <a href="/decks.html">Browse Decks</a>
+        <a href="/timer.html">Pomodoro Timer</a>
+        <a href="/import.html">Flashcard Maker</a>
+        <a href="/privacy.html">Privacy Policy</a>
+      </div>
+      <div class="footer-copy">&copy; 2026 Stacked Flashcards. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script>
+    const deckData = {"title": "Computer Science Basics", "cards": [["Algorithm", "A step-by-step procedure for solving a problem or accomplishing a task"], ["Variable", "A named storage location in memory that holds a value; can change during program execution"], ["Array", "An ordered collection of elements stored in contiguous memory; accessed by index; fixed size"], ["Loop", "Code that repeats execution; types: for loop (known iterations), while loop (condition-based)"], ["Function", "A reusable block of code that performs a specific task; takes inputs (parameters), returns output"], ["Conditional Statement", "Code that executes based on a condition; if/else/else if; controls program flow"], ["Boolean", "A data type with only two values: true or false; used in conditions and logic"], ["String", "A sequence of characters (text); immutable in many languages; enclosed in quotes"], ["Integer", "A whole number data type; no decimal point; positive, negative, or zero"], ["Binary", "Base-2 number system using 0s and 1s; how computers store all data"], ["Big O Notation", "Describes algorithm efficiency; O(1) constant, O(n) linear, O(n\u00b2) quadratic, O(log n) logarithmic"], ["Stack", "LIFO data structure (Last In, First Out); push adds, pop removes; like a stack of plates"], ["Queue", "FIFO data structure (First In, First Out); enqueue adds, dequeue removes; like a line of people"], ["Linked List", "Data structure where each element points to the next; dynamic size; no contiguous memory required"], ["Hash Table", "Key-value data structure; O(1) average lookup; handles collisions; used in dictionaries/maps"], ["Binary Tree", "Tree where each node has at most 2 children; binary search tree: left < parent < right"], ["Recursion", "A function that calls itself; needs a base case to stop; used for trees, fractals, divide-and-conquer"], ["Sorting Algorithms", "Bubble sort O(n\u00b2), merge sort O(n log n), quick sort O(n log n) avg; organize data in order"], ["Binary Search", "Efficient search on sorted data; divides in half each step; O(log n) time complexity"], ["Object-Oriented Programming", "Programming paradigm using objects with properties and methods; classes, inheritance, encapsulation, polymorphism"], ["Class", "A blueprint for creating objects; defines properties (attributes) and methods (behaviors)"], ["Inheritance", "A class can inherit properties and methods from a parent class; promotes code reuse"], ["API", "Application Programming Interface; defines how software components interact; request/response pattern"], ["HTTP Methods", "GET (retrieve), POST (create), PUT (update), DELETE (remove); used in web APIs"], ["Database", "Organized collection of data; SQL (relational tables) vs NoSQL (documents, key-value, graph)"], ["Git", "Version control system; tracks code changes; commands: commit, push, pull, branch, merge"], ["Compiler vs Interpreter", "Compiler: translates entire program before running; Interpreter: translates line by line during execution"], ["Bug", "An error in code; syntax error (won't compile), logic error (wrong result), runtime error (crashes)"], ["Testing", "Verifying code works correctly; unit tests (individual functions), integration tests (components together)"], ["Time Complexity", "How running time grows with input size; constant O(1) < logarithmic O(log n) < linear O(n) < quadratic O(n\u00b2)"]], "color": {"red": 0.353, "green": 0.784, "blue": 0.98}};
+
+    function importDeck() {
+      const stack = {
+        id: crypto.randomUUID(),
+        title: deckData.title,
+        cards: deckData.cards.map(c => ({ id: crypto.randomUUID(), front: c[0], back: c[1] })),
+        color: deckData.color
+      };
+      const json = JSON.stringify(stack);
+      const utf8Bytes = new TextEncoder().encode(json);
+      let binary = '';
+      for (let i = 0; i < utf8Bytes.length; i++) binary += String.fromCharCode(utf8Bytes[i]);
+      const encoded = btoa(binary);
+      const importUrl = 'https://stackedflashcards.com/import?stack=' + encodeURIComponent(encoded);
+      // Try to open in app, fallback to App Store for non-iOS users
+      const w = window.open(importUrl, '_blank');
+      if (!w) window.location.href = importUrl;
+    }
+
+    function toggleQR(event) {
+      const qr = document.getElementById('qrcode');
+      const btn = event.target;
+      if (qr.style.display === 'flex') { qr.style.display = 'none'; btn.textContent = 'Show QR Code'; return; }
+      const stack = {
+        id: crypto.randomUUID(),
+        title: deckData.title,
+        cards: deckData.cards.map(c => ({ id: crypto.randomUUID(), front: c[0], back: c[1] })),
+        color: deckData.color
+      };
+      const json = JSON.stringify(stack);
+      const utf8Bytes = new TextEncoder().encode(json);
+      let binary = '';
+      for (let i = 0; i < utf8Bytes.length; i++) binary += String.fromCharCode(utf8Bytes[i]);
+      const encoded = btoa(binary);
+      const link = 'https://stackedflashcards.com/import?stack=' + encodeURIComponent(encoded);
+      qr.innerHTML = '';
+      if (link.length > 3000) {
+        qr.innerHTML = '<p style="color: #f87171; font-size: 0.88rem;">This deck is too large for a QR code. Use the Import button instead.</p>';
+        btn.textContent = 'Hide QR Code';
+        qr.style.display = 'flex';
+        return;
+      }
+      QRCode.toCanvas(link, { width: 200, margin: 2, color: { dark: '#000', light: '#fff' } }, (err, canvas) => {
+        if (!err) qr.appendChild(canvas);
+      });
+      btn.textContent = 'Hide QR Code';
+      qr.style.display = 'flex';
+    }
+  </script>
+</body>
+</html>

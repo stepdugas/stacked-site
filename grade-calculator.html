@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Free Grade Calculator — Calculate Your Course Grade | Stacked</title>
+  <meta name="description" content="Free online grade calculator. Calculate your weighted course grade and letter grade instantly. No sign-up required. Add assignments, set weights, and see your grade in seconds." />
+  <meta name="keywords" content="grade calculator, GPA calculator, calculate my grade, weighted grade calculator, course grade calculator, final grade calculator, letter grade calculator" />
+  <meta name="author" content="Stacked" />
+  <link rel="canonical" href="https://stackedflashcards.com/grade-calculator.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://stackedflashcards.com/grade-calculator.html" />
+  <meta property="og:title" content="Free Grade Calculator — Calculate Your Course Grade | Stacked" />
+  <meta property="og:description" content="Calculate your weighted course grade and letter grade instantly. Free grade calculator — no sign-up needed." />
+  <meta property="og:image" content="https://stackedflashcards.com/og-image.png" />
+  <meta property="og:site_name" content="Stacked Flashcards" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Free Grade Calculator — Calculate Your Course Grade | Stacked" />
+  <meta name="twitter:description" content="Calculate your weighted course grade and letter grade instantly. Free — no sign-up needed." />
+  <meta name="twitter:image" content="https://stackedflashcards.com/og-image.png" />
+
+  <!-- Structured Data: WebApplication -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Free Grade Calculator by Stacked",
+    "url": "https://stackedflashcards.com/grade-calculator.html",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Any",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "description": "Free online grade calculator. Calculate your weighted course grade and letter grade instantly. Add assignments, set weights, and see your results.",
+    "browserRequirements": "Requires JavaScript"
+  }
+  </script>
+
+  <!-- Structured Data: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://stackedflashcards.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Grade Calculator", "item": "https://stackedflashcards.com/grade-calculator.html" }
+    ]
+  }
+  </script>
+
+  <!-- Structured Data: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I calculate my weighted grade?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To calculate your weighted grade, multiply each assignment score by its weight (as a percentage of the total), then add all the weighted scores together. For example, if you scored 90% on an exam worth 40% of your grade and 80% on homework worth 60%, your weighted grade is (90 × 0.40) + (80 × 0.60) = 36 + 48 = 84%."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a weighted average?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A weighted average is a calculation that gives different values (assignments, exams, projects) different levels of importance based on their weight. Unlike a simple average where every score counts equally, a weighted average reflects that some assignments matter more than others toward your final grade."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do letter grades work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Letter grades correspond to percentage ranges on a standard grading scale: A (93-100%), A- (90-92%), B+ (87-89%), B (83-86%), B- (80-82%), C+ (77-79%), C (73-76%), C- (70-72%), D (60-69%), and F (below 60%). Some schools may use slightly different scales, but this is the most common system in the United States."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <link rel="icon" href="/favicon.ico" sizes="32x32" />
+  <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/manifest.json" />
+
+  <!-- Preload fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --purple: #a855f7;
+      --blue: #3b82f6;
+      --bg-primary: #09090b;
+      --bg-secondary: #0f0f12;
+      --bg-card: #16161a;
+      --border: #1e1e24;
+      --border-hover: #2e2e38;
+      --text-primary: #f4f4f5;
+      --text-secondary: #a1a1aa;
+      --text-muted: #71717a;
+      --gradient: linear-gradient(135deg, #a855f7, #6366f1, #3b82f6);
+      --gradient-subtle: linear-gradient(135deg, rgba(168,85,247,0.12), rgba(59,130,246,0.12));
+      --glow-purple: rgba(168, 85, 247, 0.15);
+      --glow-blue: rgba(59, 130, 246, 0.1);
+      --radius: 16px;
+      --radius-sm: 10px;
+      --radius-lg: 24px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg-primary);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      color: var(--text-primary);
+      text-align: center;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+    }
+
+    /* Noise texture overlay */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    /* Nav */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(9, 9, 11, 0.8);
+      backdrop-filter: blur(20px) saturate(180%);
+      -webkit-backdrop-filter: blur(20px) saturate(180%);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 32px;
+      height: 64px;
+    }
+
+    .nav-logo {
+      font-size: 1.2rem;
+      font-weight: 800;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-decoration: none;
+      letter-spacing: -0.02em;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 4px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.875rem;
+      font-weight: 500;
+      padding: 8px 14px;
+      border-radius: var(--radius-sm);
+      transition: all 0.2s ease;
+    }
+    .nav-links a:hover { color: var(--text-primary); background: rgba(255,255,255,0.05); }
+    .nav-links a.active { color: var(--text-primary); }
+
+    .nav-cta {
+      background: var(--gradient) !important;
+      color: white !important;
+      padding: 8px 18px !important;
+      border-radius: var(--radius-sm) !important;
+      font-weight: 600 !important;
+      font-size: 0.85rem !important;
+      transition: opacity 0.2s, transform 0.2s !important;
+    }
+    .nav-cta:hover { opacity: 0.9 !important; transform: translateY(-1px) !important; }
+
+    /* Hero */
+    .hero {
+      position: relative;
+      padding: 100px 24px 60px;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -120px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 800px;
+      height: 500px;
+      background: radial-gradient(ellipse, var(--glow-purple) 0%, var(--glow-blue) 40%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .hero > * { position: relative; z-index: 1; }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(168, 85, 247, 0.1);
+      border: 1px solid rgba(168, 85, 247, 0.2);
+      color: var(--purple);
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 6px 16px;
+      border-radius: 100px;
+      margin-bottom: 28px;
+      letter-spacing: 0.02em;
+    }
+    .badge span { font-size: 0.7rem; }
+
+    .hero h1 {
+      font-size: clamp(2.8rem, 6vw, 4.2rem);
+      font-weight: 900;
+      letter-spacing: -0.04em;
+      line-height: 1.05;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 .gradient-text {
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-subtitle {
+      font-size: 1.15rem;
+      color: var(--text-secondary);
+      max-width: 520px;
+      margin: 0 auto 40px;
+      line-height: 1.7;
+      font-weight: 400;
+    }
+
+    /* Section layout */
+    section {
+      padding: 80px 24px;
+    }
+
+    .section-header {
+      margin-bottom: 56px;
+    }
+
+    .section-tag {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--purple);
+      margin-bottom: 14px;
+    }
+
+    .section-header h2 {
+      font-size: clamp(1.8rem, 4vw, 2.4rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      margin-bottom: 14px;
+      color: var(--text-primary);
+    }
+
+    .section-header p {
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+      max-width: 560px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    /* Calculator */
+    .calculator-section {
+      padding: 0 24px 80px;
+    }
+
+    .calculator-container {
+      max-width: 680px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    .calculator-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .calculator-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: var(--gradient-subtle);
+      opacity: 0.5;
+      pointer-events: none;
+    }
+
+    .calculator-card > * { position: relative; z-index: 1; }
+
+    .row-header {
+      display: grid;
+      grid-template-columns: 1fr 100px 100px 40px;
+      gap: 12px;
+      margin-bottom: 8px;
+      padding: 0 4px;
+    }
+
+    .row-header span {
+      font-size: 0.78rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--text-muted);
+    }
+
+    .assignment-row {
+      display: grid;
+      grid-template-columns: 1fr 100px 100px 40px;
+      gap: 12px;
+      margin-bottom: 10px;
+      align-items: center;
+    }
+
+    .assignment-row input {
+      width: 100%;
+      padding: 11px 14px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border);
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      font-size: 0.92rem;
+      font-family: inherit;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .assignment-row input:focus {
+      border-color: var(--purple);
+    }
+
+    .assignment-row input::placeholder {
+      color: var(--text-muted);
+    }
+
+    .btn-remove {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--text-muted);
+      font-size: 1.1rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s;
+    }
+
+    .btn-remove:hover {
+      border-color: #f87171;
+      color: #f87171;
+      background: rgba(248, 113, 113, 0.08);
+    }
+
+    .calculator-actions {
+      display: flex;
+      gap: 12px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+
+    .btn-add {
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--text-secondary);
+      border: 1px solid var(--border);
+      padding: 11px 22px;
+      border-radius: var(--radius-sm);
+      font-size: 0.9rem;
+      font-weight: 600;
+      font-family: inherit;
+      cursor: pointer;
+      transition: all 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .btn-add:hover {
+      border-color: var(--border-hover);
+      color: var(--text-primary);
+      background: rgba(255,255,255,0.08);
+    }
+
+    .btn-calculate {
+      background: var(--gradient);
+      color: white;
+      border: none;
+      padding: 11px 28px;
+      border-radius: var(--radius-sm);
+      font-size: 0.92rem;
+      font-weight: 700;
+      font-family: inherit;
+      cursor: pointer;
+      transition: opacity 0.2s, transform 0.2s;
+      box-shadow: 0 4px 24px rgba(168, 85, 247, 0.25);
+    }
+
+    .btn-calculate:hover {
+      opacity: 0.9;
+      transform: translateY(-1px);
+    }
+
+    .btn-reset {
+      background: transparent;
+      color: var(--text-muted);
+      border: 1px solid var(--border);
+      padding: 11px 22px;
+      border-radius: var(--radius-sm);
+      font-size: 0.9rem;
+      font-weight: 600;
+      font-family: inherit;
+      cursor: pointer;
+      transition: all 0.2s;
+      margin-left: auto;
+    }
+
+    .btn-reset:hover {
+      border-color: var(--border-hover);
+      color: var(--text-secondary);
+    }
+
+    /* Result card */
+    .result-card {
+      display: none;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 36px 32px;
+      max-width: 680px;
+      margin: 24px auto 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .result-card.visible {
+      display: block;
+    }
+
+    .result-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--gradient);
+    }
+
+    .result-label {
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+    }
+
+    .result-percentage {
+      font-size: 3rem;
+      font-weight: 900;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: -0.03em;
+      margin-bottom: 4px;
+    }
+
+    .result-letter {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--text-secondary);
+      margin-bottom: 6px;
+    }
+
+    .result-detail {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* CTA section */
+    .cta-section {
+      background: var(--bg-secondary);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      bottom: -200px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 600px;
+      height: 400px;
+      background: radial-gradient(ellipse, var(--glow-purple) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .cta-box {
+      position: relative;
+      z-index: 1;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 48px 32px;
+      max-width: 580px;
+      margin: 0 auto;
+    }
+
+    .cta-box h2 {
+      font-size: 1.8rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 12px;
+    }
+
+    .cta-box p {
+      color: var(--text-secondary);
+      max-width: 440px;
+      margin: 0 auto 28px;
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+
+    .btn-primary {
+      background: var(--gradient);
+      color: white;
+      padding: 15px 32px;
+      border-radius: 14px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      transition: opacity 0.2s, transform 0.2s;
+      box-shadow: 0 4px 24px rgba(168, 85, 247, 0.25);
+    }
+    .btn-primary:hover { opacity: 0.9; transform: translateY(-2px); box-shadow: 0 8px 32px rgba(168, 85, 247, 0.3); }
+
+    /* FAQ */
+    .faq-section {
+      background: var(--bg-primary);
+    }
+
+    .faq-list {
+      max-width: 680px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    .faq-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px 28px;
+      margin-bottom: 12px;
+      transition: border-color 0.3s;
+    }
+
+    .faq-item:hover {
+      border-color: var(--border-hover);
+    }
+
+    .faq-question {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 10px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .faq-question::after {
+      content: '+';
+      font-size: 1.3rem;
+      color: var(--text-muted);
+      transition: transform 0.2s;
+    }
+
+    .faq-item.open .faq-question::after {
+      content: '-';
+    }
+
+    .faq-answer {
+      display: none;
+      font-size: 0.92rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    .faq-item.open .faq-answer {
+      display: block;
+    }
+
+    /* Footer */
+    footer {
+      padding: 40px 24px;
+      border-top: 1px solid var(--border);
+      background: var(--bg-primary);
+    }
+
+    .footer-inner {
+      max-width: 740px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .footer-brand {
+      font-size: 1rem;
+      font-weight: 800;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.82rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--text-secondary); }
+
+    .footer-copy {
+      width: 100%;
+      text-align: center;
+      margin-top: 24px;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    /* Fade-in animation */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Responsive */
+    @media (max-width: 640px) {
+      nav { padding: 0 16px; }
+      .nav-links a:not(.nav-cta) { display: none; }
+      .nav-hamburger { display: flex; }
+      .hero { padding: 60px 20px 40px; }
+      section { padding: 60px 20px; }
+      .calculator-card { padding: 20px 16px; }
+      .row-header { grid-template-columns: 1fr 80px 80px 36px; gap: 8px; }
+      .assignment-row { grid-template-columns: 1fr 80px 80px 36px; gap: 8px; }
+      .assignment-row input { padding: 10px 10px; font-size: 0.85rem; }
+      .calculator-actions { flex-direction: column; }
+      .btn-reset { margin-left: 0; }
+      .result-percentage { font-size: 2.4rem; }
+      .cta-box { padding: 32px 20px; }
+      .faq-item { padding: 20px; }
+      .footer-inner { justify-content: center; text-align: center; }
+      .footer-links { justify-content: center; }
+    }
+
+    /* ── Hamburger menu ── */
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+      z-index: 1002;
+    }
+    .nav-hamburger span {
+      display: block;
+      width: 20px;
+      height: 2px;
+      background: var(--text-secondary, #a1a1aa);
+      border-radius: 2px;
+      transition: all 0.3s;
+    }
+    .nav-mobile {
+      display: none;
+      position: fixed;
+      inset: 0;
+      top: 64px;
+      background: rgba(9, 9, 11, 0.98);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 24px;
+      gap: 8px;
+      z-index: 999;
+    }
+    .nav-mobile.open { display: flex; }
+    .nav-mobile a {
+      color: #a1a1aa;
+      text-decoration: none;
+      font-size: 1.1rem;
+      font-weight: 600;
+      padding: 14px 24px;
+      border-radius: 12px;
+      transition: all 0.2s;
+      width: 100%;
+      max-width: 320px;
+      text-align: center;
+    }
+    .nav-mobile a:hover { color: #f4f4f5; background: rgba(255,255,255,0.05); }
+    .nav-mobile .mobile-cta {
+      background: linear-gradient(135deg, #a855f7, #6366f1, #3b82f6);
+      color: white;
+      margin-top: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Nav -->
+  <nav>
+    <a class="nav-logo" href="/">Stacked</a>
+    <div class="nav-links">
+      <a href="/">Home</a>
+      <a href="/decks.html">Decks</a>
+      <a href="/timer.html">Timer</a>
+      <a href="https://apps.apple.com/app/id6744585549" target="_blank" rel="noopener" class="nav-cta">Download Free</a>
+    </div>
+    <button class="nav-hamburger" onclick="document.querySelector('.nav-mobile').classList.toggle('open')" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="nav-mobile">
+    <a href="/">Home</a>
+    <a href="/decks.html">Browse Decks</a>
+    <a href="/timer.html">Pomodoro Timer</a>
+    <a href="/import.html">Flashcard Maker</a>
+    <a href="/study-tips.html">Study Tips</a>
+    <a href="/grade-calculator.html">Grade Calculator</a>
+    <a href="https://apps.apple.com/app/id6744585549" target="_blank" rel="noopener" class="mobile-cta">Download Free</a>
+  </div>
+
+  <main>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="badge"><span>&#10022;</span> Free — No Sign Up Required</div>
+    <h1><span class="gradient-text">Grade Calculator</span></h1>
+    <p class="hero-subtitle">Add your assignments, enter scores and weights, and instantly calculate your weighted course grade and letter grade.</p>
+  </section>
+
+  <!-- Calculator -->
+  <section class="calculator-section fade-up">
+    <div class="calculator-container">
+      <div class="calculator-card">
+        <div class="row-header">
+          <span>Assignment</span>
+          <span>Score (%)</span>
+          <span>Weight (%)</span>
+          <span></span>
+        </div>
+        <div id="assignments">
+          <!-- Rows inserted by JS -->
+        </div>
+        <div class="calculator-actions">
+          <button class="btn-add" onclick="addRow()">+ Add Assignment</button>
+          <button class="btn-calculate" onclick="calculateGrade()">Calculate Grade</button>
+          <button class="btn-reset" onclick="resetCalculator()">Reset</button>
+        </div>
+      </div>
+
+      <!-- Result -->
+      <div class="result-card" id="result-card">
+        <div class="result-label">Your Weighted Grade</div>
+        <div class="result-percentage" id="result-percentage">—</div>
+        <div class="result-letter" id="result-letter">—</div>
+        <div class="result-detail" id="result-detail"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Soft CTA -->
+  <section class="cta-section fade-up">
+    <div class="cta-box">
+      <h2>Studying for a better grade?</h2>
+      <p>Use Stacked to create AI-powered flashcards from your notes, photos, or PDFs. Study smarter and ace your exams.</p>
+      <a class="btn-primary" href="https://apps.apple.com/app/id6744585549" target="_blank" rel="noopener">
+        Download Stacked Free
+      </a>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq-section fade-up">
+    <div class="section-header">
+      <div class="section-tag">FAQ</div>
+      <h2>Frequently Asked Questions</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item open">
+        <div class="faq-question" role="button" tabindex="0" aria-expanded="true" onclick="toggleFaq(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleFaq(this)}">How do I calculate my weighted grade?</div>
+        <div class="faq-answer">To calculate your weighted grade, multiply each assignment score by its weight (as a percentage of the total), then add all the weighted scores together. For example, if you scored 90% on an exam worth 40% of your grade and 80% on homework worth 60%, your weighted grade is (90 &times; 0.40) + (80 &times; 0.60) = 36 + 48 = 84%. This calculator does the math for you automatically.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" role="button" tabindex="0" aria-expanded="false" onclick="toggleFaq(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleFaq(this)}">What is a weighted average?</div>
+        <div class="faq-answer">A weighted average is a calculation that gives different values (assignments, exams, projects) different levels of importance based on their weight. Unlike a simple average where every score counts equally, a weighted average reflects that some assignments matter more than others toward your final grade. For example, a final exam worth 50% of your grade has more impact than a quiz worth 5%.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" role="button" tabindex="0" aria-expanded="false" onclick="toggleFaq(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleFaq(this)}">How do letter grades work?</div>
+        <div class="faq-answer">Letter grades correspond to percentage ranges on a standard grading scale: A (93&ndash;100%), A- (90&ndash;92%), B+ (87&ndash;89%), B (83&ndash;86%), B- (80&ndash;82%), C+ (77&ndash;79%), C (73&ndash;76%), C- (70&ndash;72%), D (60&ndash;69%), and F (below 60%). Some schools may use slightly different scales, but this is the most common system used in the United States.</div>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">Stacked</div>
+      <div class="footer-links">
+        <a href="/">Home</a>
+        <a href="/decks.html">Browse Decks</a>
+        <a href="/timer.html">Pomodoro Timer</a>
+        <a href="/import.html">Flashcard Maker</a>
+        <a href="/privacy.html">Privacy Policy</a>
+      </div>
+      <div class="footer-copy">&copy; 2026 Stacked Flashcards. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script>
+    // Initialize with 3 empty rows
+    function init() {
+      for (let i = 0; i < 3; i++) addRow();
+    }
+
+    function addRow() {
+      const container = document.getElementById('assignments');
+      const row = document.createElement('div');
+      row.className = 'assignment-row';
+      row.innerHTML = `
+        <input type="text" placeholder="e.g. Midterm Exam" />
+        <input type="number" placeholder="Score" min="0" max="200" step="any" />
+        <input type="number" placeholder="Weight" min="0" max="100" step="any" />
+        <button class="btn-remove" onclick="removeRow(this)" title="Remove">&times;</button>
+      `;
+      container.appendChild(row);
+    }
+
+    function removeRow(btn) {
+      const container = document.getElementById('assignments');
+      // Keep at least one row
+      if (container.children.length > 1) {
+        btn.parentElement.remove();
+      }
+    }
+
+    function getLetterGrade(score) {
+      if (score >= 93) return 'A';
+      if (score >= 90) return 'A-';
+      if (score >= 87) return 'B+';
+      if (score >= 83) return 'B';
+      if (score >= 80) return 'B-';
+      if (score >= 77) return 'C+';
+      if (score >= 73) return 'C';
+      if (score >= 70) return 'C-';
+      if (score >= 60) return 'D';
+      return 'F';
+    }
+
+    function calculateGrade() {
+      const rows = document.querySelectorAll('.assignment-row');
+      let totalWeightedScore = 0;
+      let totalWeight = 0;
+      let validRows = 0;
+
+      rows.forEach(row => {
+        const inputs = row.querySelectorAll('input');
+        const score = parseFloat(inputs[1].value);
+        const weight = parseFloat(inputs[2].value);
+
+        if (!isNaN(score) && !isNaN(weight) && weight > 0) {
+          totalWeightedScore += score * weight;
+          totalWeight += weight;
+          validRows++;
+        }
+      });
+
+      const resultCard = document.getElementById('result-card');
+
+      if (validRows === 0) {
+        resultCard.classList.remove('visible');
+        return;
+      }
+
+      const weightedAverage = totalWeightedScore / totalWeight;
+      const letter = getLetterGrade(weightedAverage);
+
+      document.getElementById('result-percentage').textContent = weightedAverage.toFixed(2) + '%';
+      document.getElementById('result-letter').textContent = letter;
+
+      // Build detail text
+      let detail = validRows + ' assignment' + (validRows > 1 ? 's' : '') + ' calculated';
+      if (Math.abs(totalWeight - 100) > 0.01) {
+        detail += ' — total weight adds up to ' + totalWeight.toFixed(1) + '% (normalized)';
+      }
+      document.getElementById('result-detail').textContent = detail;
+
+      resultCard.classList.add('visible');
+
+      // Scroll result into view
+      resultCard.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+
+    function resetCalculator() {
+      const container = document.getElementById('assignments');
+      container.innerHTML = '';
+      for (let i = 0; i < 3; i++) addRow();
+      document.getElementById('result-card').classList.remove('visible');
+    }
+
+    function toggleFaq(el) {
+      const item = el.parentElement;
+      item.classList.toggle('open');
+      el.setAttribute('aria-expanded', item.classList.contains('open'));
+    }
+
+    // Scroll-triggered fade-in
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+    // Boot
+    init();
+  </script>
+
+</body>
+</html>

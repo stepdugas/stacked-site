@@ -1,0 +1,186 @@
+[
+  {
+    "slug": "sat-vocabulary",
+    "title": "SAT Vocabulary",
+    "category": "Test Prep",
+    "description": "Essential SAT vocabulary words with definitions. Master these high-frequency words to boost your verbal score.",
+    "card_count": 50,
+    "color": "#007AFF"
+  },
+  {
+    "slug": "gre-vocabulary",
+    "title": "GRE Vocabulary",
+    "category": "Test Prep",
+    "description": "High-frequency GRE vocabulary words for the verbal reasoning section. Essential for graduate school admissions.",
+    "card_count": 50,
+    "color": "#AF52DE"
+  },
+  {
+    "slug": "ap-biology",
+    "title": "AP Biology",
+    "category": "AP Exams",
+    "description": "Key concepts for AP Biology covering cell biology, genetics, evolution, and ecology.",
+    "card_count": 40,
+    "color": "#30D158"
+  },
+  {
+    "slug": "ap-us-history",
+    "title": "AP US History (APUSH)",
+    "category": "AP Exams",
+    "description": "Key events, people, and concepts for AP US History from colonization to modern America.",
+    "card_count": 30,
+    "color": "#FF9F0A"
+  },
+  {
+    "slug": "ap-psychology",
+    "title": "AP Psychology",
+    "category": "AP Exams",
+    "description": "Key terms, theories, and psychologists for AP Psychology covering all major units.",
+    "card_count": 30,
+    "color": "#FF375F"
+  },
+  {
+    "slug": "spanish-101",
+    "title": "Spanish 101 \u2014 Common Phrases",
+    "category": "Languages",
+    "description": "Essential Spanish phrases and vocabulary for beginners. Perfect for Spanish 1 students or travelers.",
+    "card_count": 50,
+    "color": "#FF9F0A"
+  },
+  {
+    "slug": "french-101",
+    "title": "French 101 \u2014 Common Phrases",
+    "category": "Languages",
+    "description": "Essential French phrases and vocabulary for beginners. Perfect for French 1 students or travelers visiting France.",
+    "card_count": 40,
+    "color": "#007AFF"
+  },
+  {
+    "slug": "japanese-hiragana",
+    "title": "Japanese Hiragana",
+    "category": "Languages",
+    "description": "Learn all 46 basic Hiragana characters. The essential first step to reading Japanese.",
+    "card_count": 46,
+    "color": "#FF375F"
+  },
+  {
+    "slug": "anatomy-physiology",
+    "title": "Anatomy & Physiology",
+    "category": "College",
+    "description": "Essential anatomy and physiology terms covering body systems, organs, and functions.",
+    "card_count": 30,
+    "color": "#30D158"
+  },
+  {
+    "slug": "us-state-capitals",
+    "title": "US State Capitals",
+    "category": "General Knowledge",
+    "description": "All 50 US state capitals. A must-know for geography, civics, and general knowledge.",
+    "card_count": 50,
+    "color": "#007AFF"
+  },
+  {
+    "slug": "periodic-table",
+    "title": "Periodic Table \u2014 First 30 Elements",
+    "category": "Science",
+    "description": "The first 30 elements of the periodic table with symbols and atomic numbers.",
+    "card_count": 30,
+    "color": "#5AC8FA"
+  },
+  {
+    "slug": "psychology-101",
+    "title": "Psychology 101",
+    "category": "College",
+    "description": "Introductory psychology concepts covering major theories, disorders, and researchers.",
+    "card_count": 30,
+    "color": "#AF52DE"
+  },
+  {
+    "slug": "medical-terminology",
+    "title": "Medical Terminology",
+    "category": "Professional",
+    "description": "Essential medical prefixes, suffixes, and terms for healthcare students and professionals.",
+    "card_count": 30,
+    "color": "#30D158"
+  },
+  {
+    "slug": "world-capitals",
+    "title": "World Capitals",
+    "category": "General Knowledge",
+    "description": "Capital cities of 40 major countries around the world.",
+    "card_count": 40,
+    "color": "#5AC8FA"
+  },
+  {
+    "slug": "literary-terms",
+    "title": "Literary Terms",
+    "category": "English",
+    "description": "Key literary terms and devices for English class, AP Literature, and the SAT reading section.",
+    "card_count": 30,
+    "color": "#AF52DE"
+  },
+  {
+    "slug": "economics-101",
+    "title": "Economics 101",
+    "category": "College",
+    "description": "Fundamental economics concepts including supply and demand, market structures, and macroeconomic indicators.",
+    "card_count": 30,
+    "color": "#FF9F0A"
+  },
+  {
+    "slug": "computer-science-basics",
+    "title": "Computer Science Basics",
+    "category": "College",
+    "description": "Fundamental computer science concepts including data structures, algorithms, and programming basics.",
+    "card_count": 30,
+    "color": "#5AC8FA"
+  },
+  {
+    "slug": "ap-chemistry",
+    "title": "AP Chemistry",
+    "category": "AP Exams",
+    "description": "Key concepts for AP Chemistry including atomic structure, bonding, reactions, and thermodynamics.",
+    "card_count": 30,
+    "color": "#FF375F"
+  },
+  {
+    "slug": "ap-world-history",
+    "title": "AP World History",
+    "category": "AP Exams",
+    "description": "Key events, civilizations, and concepts for AP World History from ancient to modern times.",
+    "card_count": 30,
+    "color": "#FF9F0A"
+  },
+  {
+    "slug": "italian-101",
+    "title": "Italian 101 \u2014 Common Phrases",
+    "category": "Languages",
+    "description": "Essential Italian phrases and vocabulary for beginners and travelers visiting Italy.",
+    "card_count": 30,
+    "color": "#30D158"
+  },
+  {
+    "slug": "mandarin-basics",
+    "title": "Mandarin Chinese \u2014 Basic Phrases",
+    "category": "Languages",
+    "description": "Essential Mandarin Chinese phrases with pinyin pronunciation for beginners.",
+    "card_count": 30,
+    "color": "#FF375F"
+  },
+  {
+    "slug": "ap-government",
+    "title": "AP US Government & Politics",
+    "category": "AP Exams",
+    "description": "Key concepts for AP Government including the Constitution, branches of government, and civil liberties.",
+    "card_count": 30,
+    "color": "#007AFF"
+  },
+  {
+    "slug": "aws-cloud-practitioner",
+    "title": "AWS Cloud Practitioner (CLF-C02)",
+    "category": "Professional",
+    "description": "Key concepts for the AWS Certified Cloud Practitioner exam covering cloud concepts, security, technology, and billing.",
+    "card_count": 60,
+    "color": "#FF9F0A"
+  }
+]

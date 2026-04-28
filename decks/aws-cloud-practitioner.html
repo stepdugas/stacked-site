@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Free AWS Cloud Practitioner (CLF-C02) Flashcards | Stacked</title>
+  <meta name="description" content="Free AWS Cloud Practitioner flashcards. 60 essential terms for the CLF-C02 exam. Cloud concepts, security, services, and billing." />
+  <meta name="keywords" content="AWS Cloud Practitioner flashcards, CLF-C02 study cards, AWS certification, cloud computing flashcards, AWS exam prep" />
+  <link rel="canonical" href="https://stackedflashcards.com/decks/aws-cloud-practitioner.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://stackedflashcards.com/decks/aws-cloud-practitioner.html" />
+  <meta property="og:title" content="Free AWS Cloud Practitioner (CLF-C02) Flashcards" />
+  <meta property="og:description" content="Free AWS Cloud Practitioner flashcards. 60 essential terms for the CLF-C02 exam. Cloud concepts, security, services, and billing." />
+  <meta property="og:image" content="https://stackedflashcards.com/og-image.png" />
+  <meta property="og:site_name" content="Stacked Flashcards" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Free AWS Cloud Practitioner (CLF-C02) Flashcards" />
+  <meta name="twitter:description" content="Free AWS Cloud Practitioner flashcards. 60 essential terms for the CLF-C02 exam. Cloud concepts, security, services, and billing." />
+  <meta name="twitter:image" content="https://stackedflashcards.com/og-image.png" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LearningResource",
+    "name": "AWS Cloud Practitioner (CLF-C02)",
+    "description": "Key concepts for the AWS Certified Cloud Practitioner exam covering cloud concepts, security, technology, and billing.",
+    "educationalLevel": "Beginner",
+    "learningResourceType": "Flashcards",
+    "isAccessibleForFree": true,
+    "url": "https://stackedflashcards.com/decks/aws-cloud-practitioner.html",
+    "provider": { "@type": "Organization", "name": "Stacked Flashcards", "url": "https://stackedflashcards.com" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://stackedflashcards.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Decks", "item": "https://stackedflashcards.com/decks.html" },
+      { "@type": "ListItem", "position": 3, "name": "AWS Cloud Practitioner (CLF-C02)", "item": "https://stackedflashcards.com/decks/aws-cloud-practitioner.html" }
+    ]
+  }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.3/build/qrcode.min.js"></script>
+  <link rel="icon" href="/favicon.ico" sizes="32x32" />
+  <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/manifest.json" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--purple:#a855f7;--blue:#3b82f6;--bg-primary:#09090b;--bg-secondary:#0f0f12;--bg-card:#16161a;--border:#1e1e24;--border-hover:#2e2e38;--text-primary:#f4f4f5;--text-secondary:#a1a1aa;--text-muted:#71717a;--gradient:linear-gradient(135deg,#a855f7,#6366f1,#3b82f6);--gradient-subtle:linear-gradient(135deg,rgba(168,85,247,0.12),rgba(59,130,246,0.12));--glow-purple:rgba(168,85,247,0.15);--radius:16px;--radius-sm:10px;--radius-lg:24px}
+    html{scroll-behavior:smooth}
+    body{background:var(--bg-primary);font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:var(--text-primary);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+    body::before{content:'';position:fixed;inset:0;background:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");pointer-events:none;z-index:1}
+    nav{position:sticky;top:0;z-index:1000;background:rgba(9,9,11,0.8);backdrop-filter:blur(20px) saturate(180%);-webkit-backdrop-filter:blur(20px) saturate(180%);border-bottom:1px solid rgba(255,255,255,0.06);display:flex;align-items:center;justify-content:space-between;padding:0 32px;height:64px}
+    .nav-logo{font-size:1.2rem;font-weight:800;background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;text-decoration:none;letter-spacing:-0.02em}
+    .nav-links{display:flex;gap:4px;align-items:center}
+    .nav-links a{color:var(--text-muted);text-decoration:none;font-size:0.875rem;font-weight:500;padding:8px 14px;border-radius:var(--radius-sm);transition:all 0.2s ease}
+    .nav-links a:hover{color:var(--text-primary);background:rgba(255,255,255,0.05)}
+    .nav-cta{background:var(--gradient)!important;color:white!important;padding:8px 18px!important;border-radius:var(--radius-sm)!important;font-weight:600!important;font-size:0.85rem!important}
+    .nav-cta:hover{opacity:0.9!important}
+    main{max-width:720px;margin:0 auto;padding:48px 24px 80px}
+    .page-header{text-align:center;margin-bottom:40px;position:relative}
+    .page-header::before{content:'';position:absolute;top:-100px;left:50%;transform:translateX(-50%);width:500px;height:300px;background:radial-gradient(ellipse,var(--glow-purple) 0%,transparent 70%);pointer-events:none;z-index:0}
+    .page-header>*{position:relative;z-index:1}
+    .page-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(74,222,128,0.1);border:1px solid rgba(74,222,128,0.2);color:#4ade80;font-size:0.72rem;font-weight:700;padding:5px 14px;border-radius:100px;margin-bottom:16px;text-transform:uppercase;letter-spacing:0.06em}
+    .cat-badge{background:rgba(168,85,247,0.1);border:1px solid rgba(168,85,247,0.2);color:var(--purple);margin-right:8px}
+    .page-header h1{font-size:clamp(1.8rem,4vw,2.4rem);font-weight:900;letter-spacing:-0.03em;margin-bottom:10px;background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+    .page-desc{color:var(--text-secondary);font-size:1rem;line-height:1.6;max-width:560px;margin:0 auto 24px}
+    .deck-stats{display:flex;gap:24px;justify-content:center;margin-bottom:32px;font-size:0.82rem;color:var(--text-muted)}
+    .deck-stats span{font-weight:600;color:var(--text-secondary)}
+    .import-bar{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:24px;margin-bottom:40px;text-align:center}
+    .import-bar p{color:var(--text-secondary);font-size:0.92rem;margin-bottom:16px}
+    .btn-import{display:inline-block;background:var(--gradient);color:white;padding:14px 32px;border-radius:14px;text-decoration:none;font-weight:700;font-size:1rem;border:none;cursor:pointer;font-family:inherit;transition:opacity 0.2s,transform 0.2s;box-shadow:0 4px 20px rgba(168,85,247,0.25)}
+    .btn-import:hover{opacity:0.9;transform:translateY(-2px)}
+    .btn-secondary{display:inline-block;background:rgba(255,255,255,0.05);color:var(--text-secondary);border:1px solid var(--border);padding:10px 20px;border-radius:var(--radius-sm);text-decoration:none;font-weight:600;font-size:0.85rem;margin-left:10px;cursor:pointer;font-family:inherit;transition:all 0.2s}
+    .btn-secondary:hover{border-color:var(--border-hover);color:var(--text-primary)}
+    #qrcode{display:none;justify-content:center;margin-top:16px}
+    #qrcode canvas{border-radius:var(--radius-sm)}
+    .cards-section h2{font-size:1.2rem;font-weight:700;margin-bottom:20px;color:var(--text-primary)}
+    .card-list{display:flex;flex-direction:column;gap:8px}
+    .card-item{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-sm);padding:16px 18px;display:grid;grid-template-columns:1fr 1fr;gap:16px;transition:border-color 0.2s}
+    .card-item:hover{border-color:var(--border-hover)}
+    .card-front{font-weight:600;font-size:0.9rem;color:var(--text-primary)}
+    .card-back{font-size:0.88rem;color:var(--text-muted);line-height:1.5}
+    .card-divider{width:1px;background:var(--border)}
+    .app-cta{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:32px 24px;margin-top:48px;text-align:center;position:relative;overflow:hidden}
+    .app-cta::before{content:'';position:absolute;inset:0;background:var(--gradient-subtle);opacity:0.5}
+    .app-cta>*{position:relative;z-index:1}
+    .app-cta p{color:var(--text-secondary);font-size:1rem;margin-bottom:16px;line-height:1.6}
+    .app-cta .g{background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-weight:700}
+    .app-cta a{display:inline-block;background:var(--gradient);color:white;padding:13px 28px;border-radius:14px;text-decoration:none;font-weight:600;font-size:0.95rem;transition:opacity 0.2s}
+    .app-cta a:hover{opacity:0.9}
+    footer{padding:40px 24px;border-top:1px solid var(--border)}
+    .footer-inner{max-width:740px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+    .footer-brand{font-size:1rem;font-weight:800;background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+    .footer-links{display:flex;gap:24px;flex-wrap:wrap}
+    .footer-links a{color:var(--text-muted);text-decoration:none;font-size:0.82rem;font-weight:500;transition:color 0.2s}
+    .footer-links a:hover{color:var(--text-secondary)}
+    .footer-copy{width:100%;text-align:center;margin-top:24px;font-size:0.75rem;color:var(--text-muted)}
+    @media(max-width:640px){nav{padding:0 16px}.nav-links a:not(.nav-cta){display:none}main{padding:32px 16px 60px}.card-item{grid-template-columns:1fr;gap:6px}.footer-inner{justify-content:center;text-align:center}.footer-links{justify-content:center}}
+
+    /* ── Hamburger menu ── */
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+      z-index: 1002;
+    }
+    .nav-hamburger span {
+      display: block;
+      width: 20px;
+      height: 2px;
+      background: var(--text-secondary, #a1a1aa);
+      border-radius: 2px;
+      transition: all 0.3s;
+    }
+    .nav-mobile {
+      display: none;
+      position: fixed;
+      inset: 0;
+      top: 64px;
+      background: rgba(9, 9, 11, 0.98);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 24px;
+      gap: 8px;
+      z-index: 999;
+    }
+    .nav-mobile.open { display: flex; }
+    .nav-mobile a {
+      color: #a1a1aa;
+      text-decoration: none;
+      font-size: 1.1rem;
+      font-weight: 600;
+      padding: 14px 24px;
+      border-radius: 12px;
+      transition: all 0.2s;
+      width: 100%;
+      max-width: 320px;
+      text-align: center;
+    }
+    .nav-mobile a:hover { color: #f4f4f5; background: rgba(255,255,255,0.05); }
+    .nav-mobile .mobile-cta {
+      background: linear-gradient(135deg, #a855f7, #6366f1, #3b82f6);
+      color: white;
+      margin-top: 8px;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a class="nav-logo" href="/">Stacked</a>
+    <div class="nav-links">
+      <a href="/">Home</a>
+      <a href="/decks.html">Decks</a>
+      <a href="/timer.html">Timer</a>
+      <a href="https://apps.apple.com/app/id6744585549" target="_blank" rel="noopener" class="nav-cta">Download Free</a>
+    </div>
+    <button class="nav-hamburger" onclick="document.querySelector('.nav-mobile').classList.toggle('open')" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="nav-mobile">
+    <a href="/">Home</a>
+    <a href="/decks.html">Browse Decks</a>
+    <a href="/timer.html">Pomodoro Timer</a>
+    <a href="/import.html">Flashcard Maker</a>
+    <a href="/study-tips.html">Study Tips</a>
+    <a href="/grade-calculator.html">Grade Calculator</a>
+    <a href="https://apps.apple.com/app/id6744585549" target="_blank" rel="noopener" class="mobile-cta">Download Free</a>
+  </div>
+
+  <main>
+    <div class="page-header">
+      <span class="page-badge cat-badge">Professional</span>
+      <span class="page-badge">60 Cards — Free</span>
+      <h1>AWS Cloud Practitioner (CLF-C02)</h1>
+      <p class="page-desc">Key concepts for the AWS Certified Cloud Practitioner exam covering cloud concepts, security, technology, and billing.</p>
+    </div>
+
+    <div class="import-bar">
+      <p>Import this deck directly into the Stacked app</p>
+      <button class="btn-import" onclick="importDeck()">Import to Stacked</button>
+      <button class="btn-secondary" onclick="toggleQR(event)">Show QR Code</button>
+      <div id="qrcode"></div>
+    </div>
+
+    <div class="cards-section">
+      <h2>All 60 Cards</h2>
+      <div class="card-list">
+        <div class="card-item"><div class="card-front">Cloud Computing</div><div class="card-back">On-demand delivery of IT resources over the internet with pay-as-you-go pricing; no upfront capital expense</div></div>
+        <div class="card-item"><div class="card-front">AWS Regions</div><div class="card-back">Geographic areas with multiple Availability Zones; choose based on compliance, latency, service availability, and cost</div></div>
+        <div class="card-item"><div class="card-front">Availability Zones (AZs)</div><div class="card-back">One or more discrete data centers with redundant power, networking; isolated from failures in other AZs</div></div>
+        <div class="card-item"><div class="card-front">Edge Locations</div><div class="card-back">Sites that cache content closer to users for low latency; used by CloudFront (CDN) and Route 53</div></div>
+        <div class="card-item"><div class="card-front">Shared Responsibility Model</div><div class="card-back">AWS manages security OF the cloud (hardware, infrastructure); customer manages security IN the cloud (data, access, apps)</div></div>
+        <div class="card-item"><div class="card-front">IaaS (Infrastructure as a Service)</div><div class="card-back">Provides virtualized computing resources; most control; example: EC2, where you manage OS and up</div></div>
+        <div class="card-item"><div class="card-front">PaaS (Platform as a Service)</div><div class="card-back">Provides platform to build apps without managing infrastructure; example: Elastic Beanstalk</div></div>
+        <div class="card-item"><div class="card-front">SaaS (Software as a Service)</div><div class="card-back">Complete application managed by provider; example: Gmail, Salesforce, Amazon WorkSpaces</div></div>
+        <div class="card-item"><div class="card-front">Amazon EC2</div><div class="card-back">Elastic Compute Cloud; virtual servers in the cloud; choose instance type, OS, storage; scalable</div></div>
+        <div class="card-item"><div class="card-front">EC2 Instance Types</div><div class="card-back">General Purpose (balanced), Compute Optimized (CPU), Memory Optimized (RAM), Storage Optimized, Accelerated (GPU)</div></div>
+        <div class="card-item"><div class="card-front">EC2 Pricing Models</div><div class="card-back">On-Demand (pay per hour), Reserved (1-3yr commitment, up to 72% off), Spot (up to 90% off, can be interrupted), Savings Plans</div></div>
+        <div class="card-item"><div class="card-front">Amazon S3</div><div class="card-back">Simple Storage Service; object storage; unlimited storage; 99.999999999% (11 9s) durability; buckets and objects</div></div>
+        <div class="card-item"><div class="card-front">S3 Storage Classes</div><div class="card-back">Standard, Intelligent-Tiering, Standard-IA, One Zone-IA, Glacier Instant/Flexible/Deep Archive; cost vs access tradeoff</div></div>
+        <div class="card-item"><div class="card-front">Amazon RDS</div><div class="card-back">Relational Database Service; managed databases; supports MySQL, PostgreSQL, MariaDB, Oracle, SQL Server, Aurora</div></div>
+        <div class="card-item"><div class="card-front">Amazon Aurora</div><div class="card-back">AWS-built relational database; MySQL/PostgreSQL compatible; 5x faster than MySQL; auto-scales; highly available</div></div>
+        <div class="card-item"><div class="card-front">Amazon DynamoDB</div><div class="card-back">Fully managed NoSQL database; key-value and document; single-digit millisecond latency; serverless; auto-scales</div></div>
+        <div class="card-item"><div class="card-front">AWS Lambda</div><div class="card-back">Serverless compute; run code without provisioning servers; pay only for compute time used; event-driven; up to 15 min</div></div>
+        <div class="card-item"><div class="card-front">Amazon VPC</div><div class="card-back">Virtual Private Cloud; isolated network in AWS; you control IP ranges, subnets, route tables, gateways</div></div>
+        <div class="card-item"><div class="card-front">Security Groups</div><div class="card-back">Virtual firewalls for EC2 instances; control inbound/outbound traffic; stateful; allow rules only (no deny)</div></div>
+        <div class="card-item"><div class="card-front">NACLs (Network ACLs)</div><div class="card-back">Firewall at subnet level; stateless; supports allow AND deny rules; evaluated in order by rule number</div></div>
+        <div class="card-item"><div class="card-front">AWS IAM</div><div class="card-back">Identity and Access Management; manage users, groups, roles, and policies; controls who can access what; free service</div></div>
+        <div class="card-item"><div class="card-front">IAM Policies</div><div class="card-back">JSON documents defining permissions; Effect (Allow/Deny), Action, Resource; follow least privilege principle</div></div>
+        <div class="card-item"><div class="card-front">IAM Roles</div><div class="card-back">Temporary credentials for AWS services or cross-account access; no permanent passwords; assumed by services like EC2</div></div>
+        <div class="card-item"><div class="card-front">MFA (Multi-Factor Authentication)</div><div class="card-back">Extra layer of security; something you know (password) + something you have (device/token); always enable on root</div></div>
+        <div class="card-item"><div class="card-front">Root User</div><div class="card-back">Account owner with unrestricted access; use only for initial setup and billing; lock away credentials; enable MFA</div></div>
+        <div class="card-item"><div class="card-front">AWS Organizations</div><div class="card-back">Manage multiple AWS accounts centrally; consolidated billing; Service Control Policies (SCPs) for governance</div></div>
+        <div class="card-item"><div class="card-front">Amazon CloudFront</div><div class="card-back">Content Delivery Network (CDN); caches content at edge locations globally; reduces latency; works with S3, EC2, etc.</div></div>
+        <div class="card-item"><div class="card-front">Amazon Route 53</div><div class="card-back">DNS web service; domain registration; health checks; routing policies: simple, weighted, latency, failover, geolocation</div></div>
+        <div class="card-item"><div class="card-front">Elastic Load Balancing (ELB)</div><div class="card-back">Distributes incoming traffic across multiple targets (EC2, containers); types: ALB (HTTP), NLB (TCP), GLB (3rd party)</div></div>
+        <div class="card-item"><div class="card-front">Auto Scaling</div><div class="card-back">Automatically adds/removes EC2 instances based on demand; maintains performance; reduces costs; set min/max/desired</div></div>
+        <div class="card-item"><div class="card-front">Amazon SQS</div><div class="card-back">Simple Queue Service; fully managed message queuing; decouples applications; standard and FIFO queues</div></div>
+        <div class="card-item"><div class="card-front">Amazon SNS</div><div class="card-back">Simple Notification Service; pub/sub messaging; sends notifications via email, SMS, HTTP, Lambda; fan-out pattern</div></div>
+        <div class="card-item"><div class="card-front">AWS CloudFormation</div><div class="card-back">Infrastructure as Code (IaC); define resources in JSON/YAML templates; automates provisioning; repeatable deployments</div></div>
+        <div class="card-item"><div class="card-front">AWS CloudTrail</div><div class="card-back">Logs all API calls in your AWS account; who did what, when, from where; governance, compliance, auditing</div></div>
+        <div class="card-item"><div class="card-front">Amazon CloudWatch</div><div class="card-back">Monitoring service; collects metrics, logs, alarms; monitors EC2, Lambda, RDS, etc.; set alerts and dashboards</div></div>
+        <div class="card-item"><div class="card-front">AWS Trusted Advisor</div><div class="card-back">Automated best practice checks; cost optimization, performance, security, fault tolerance, service limits</div></div>
+        <div class="card-item"><div class="card-front">AWS Config</div><div class="card-back">Tracks resource configurations over time; evaluates compliance against rules; shows configuration history</div></div>
+        <div class="card-item"><div class="card-front">Amazon GuardDuty</div><div class="card-back">Threat detection service; monitors for malicious activity using ML; analyzes CloudTrail, VPC Flow Logs, DNS logs</div></div>
+        <div class="card-item"><div class="card-front">AWS Shield</div><div class="card-back">DDoS protection; Standard (free, automatic); Advanced (paid, dedicated response team, cost protection)</div></div>
+        <div class="card-item"><div class="card-front">AWS WAF</div><div class="card-back">Web Application Firewall; protects against SQL injection, XSS; rules on CloudFront, ALB, API Gateway</div></div>
+        <div class="card-item"><div class="card-front">AWS KMS</div><div class="card-back">Key Management Service; create and manage encryption keys; integrates with most AWS services; automatic key rotation</div></div>
+        <div class="card-item"><div class="card-front">Well-Architected Framework</div><div class="card-back">6 pillars: Operational Excellence, Security, Reliability, Performance Efficiency, Cost Optimization, Sustainability</div></div>
+        <div class="card-item"><div class="card-front">Elasticity</div><div class="card-back">Ability to automatically scale resources up/down based on demand; key cloud advantage; avoid over/under-provisioning</div></div>
+        <div class="card-item"><div class="card-front">High Availability</div><div class="card-back">System designed to operate continuously; achieved through multi-AZ deployments and redundancy</div></div>
+        <div class="card-item"><div class="card-front">Fault Tolerance</div><div class="card-back">System continues operating even if components fail; redundancy at every layer; example: multi-AZ RDS</div></div>
+        <div class="card-item"><div class="card-front">Disaster Recovery Strategies</div><div class="card-back">Backup &amp; Restore (cheapest) → Pilot Light → Warm Standby → Multi-Site Active-Active (fastest recovery)</div></div>
+        <div class="card-item"><div class="card-front">AWS Free Tier</div><div class="card-back">Three types: Always Free (Lambda 1M requests/mo), 12 Months Free (EC2 t2.micro 750 hrs/mo), Trials</div></div>
+        <div class="card-item"><div class="card-front">AWS Pricing Calculator</div><div class="card-back">Estimate cost of AWS services before deploying; create estimates for your architecture</div></div>
+        <div class="card-item"><div class="card-front">AWS Budgets</div><div class="card-back">Set custom cost and usage budgets; get alerts when you exceed or forecast to exceed thresholds</div></div>
+        <div class="card-item"><div class="card-front">AWS Cost Explorer</div><div class="card-back">Visualize and analyze AWS spending over time; filter by service, region, tag; forecast future costs</div></div>
+        <div class="card-item"><div class="card-front">Consolidated Billing</div><div class="card-back">Single bill for all accounts in AWS Organizations; volume discounts across accounts</div></div>
+        <div class="card-item"><div class="card-front">AWS Support Plans</div><div class="card-back">Basic (free), Developer ($29/mo), Business ($100/mo, 24/7), Enterprise On-Ramp ($5,500/mo), Enterprise ($15K/mo, TAM)</div></div>
+        <div class="card-item"><div class="card-front">TAM (Technical Account Manager)</div><div class="card-back">Dedicated AWS expert; proactive guidance; only available with Enterprise support plan</div></div>
+        <div class="card-item"><div class="card-front">Amazon Elastic Beanstalk</div><div class="card-back">PaaS; deploy web apps without managing infrastructure; supports Java, .NET, Node.js, Python, Docker</div></div>
+        <div class="card-item"><div class="card-front">Amazon ECS / EKS</div><div class="card-back">Container services; ECS = AWS-managed containers; EKS = managed Kubernetes; run Docker containers at scale</div></div>
+        <div class="card-item"><div class="card-front">AWS Fargate</div><div class="card-back">Serverless containers; run containers without managing servers; works with ECS and EKS; pay for resources used</div></div>
+        <div class="card-item"><div class="card-front">Amazon Redshift</div><div class="card-back">Data warehouse service; petabyte-scale analytics; SQL queries; columnar storage; fast OLAP</div></div>
+        <div class="card-item"><div class="card-front">AWS Artifact</div><div class="card-back">On-demand access to AWS compliance reports and agreements; SOC reports, PCI, ISO certifications</div></div>
+        <div class="card-item"><div class="card-front">AWS Marketplace</div><div class="card-back">Digital catalog of third-party software; buy and deploy on AWS; AMIs, containers, SaaS</div></div>
+        <div class="card-item"><div class="card-front">Six Advantages of Cloud</div><div class="card-back">1) Trade capex for opex 2) Economies of scale 3) Stop guessing capacity 4) Increase speed/agility 5) Stop spending on data centers 6) Go global in minutes</div></div>
+      </div>
+    </div>
+
+    <div class="app-cta">
+      <p>Study this deck on the go with <span class="g">Stacked</span> — the AI-powered flashcard app.</p>
+      <a href="https://apps.apple.com/app/id6744585549" target="_blank" rel="noopener">Get Stacked Free →</a>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">Stacked</div>
+      <div class="footer-links">
+        <a href="/">Home</a>
+        <a href="/decks.html">Browse Decks</a>
+        <a href="/timer.html">Pomodoro Timer</a>
+        <a href="/import.html">Flashcard Maker</a>
+        <a href="/privacy.html">Privacy Policy</a>
+      </div>
+      <div class="footer-copy">&copy; 2026 Stacked Flashcards. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script>
+    const deckData = {"title": "AWS Cloud Practitioner (CLF-C02)", "cards": [["Cloud Computing", "On-demand delivery of IT resources over the internet with pay-as-you-go pricing; no upfront capital expense"], ["AWS Regions", "Geographic areas with multiple Availability Zones; choose based on compliance, latency, service availability, and cost"], ["Availability Zones (AZs)", "One or more discrete data centers with redundant power, networking; isolated from failures in other AZs"], ["Edge Locations", "Sites that cache content closer to users for low latency; used by CloudFront (CDN) and Route 53"], ["Shared Responsibility Model", "AWS manages security OF the cloud (hardware, infrastructure); customer manages security IN the cloud (data, access, apps)"], ["IaaS (Infrastructure as a Service)", "Provides virtualized computing resources; most control; example: EC2, where you manage OS and up"], ["PaaS (Platform as a Service)", "Provides platform to build apps without managing infrastructure; example: Elastic Beanstalk"], ["SaaS (Software as a Service)", "Complete application managed by provider; example: Gmail, Salesforce, Amazon WorkSpaces"], ["Amazon EC2", "Elastic Compute Cloud; virtual servers in the cloud; choose instance type, OS, storage; scalable"], ["EC2 Instance Types", "General Purpose (balanced), Compute Optimized (CPU), Memory Optimized (RAM), Storage Optimized, Accelerated (GPU)"], ["EC2 Pricing Models", "On-Demand (pay per hour), Reserved (1-3yr commitment, up to 72% off), Spot (up to 90% off, can be interrupted), Savings Plans"], ["Amazon S3", "Simple Storage Service; object storage; unlimited storage; 99.999999999% (11 9s) durability; buckets and objects"], ["S3 Storage Classes", "Standard, Intelligent-Tiering, Standard-IA, One Zone-IA, Glacier Instant/Flexible/Deep Archive; cost vs access tradeoff"], ["Amazon RDS", "Relational Database Service; managed databases; supports MySQL, PostgreSQL, MariaDB, Oracle, SQL Server, Aurora"], ["Amazon Aurora", "AWS-built relational database; MySQL/PostgreSQL compatible; 5x faster than MySQL; auto-scales; highly available"], ["Amazon DynamoDB", "Fully managed NoSQL database; key-value and document; single-digit millisecond latency; serverless; auto-scales"], ["AWS Lambda", "Serverless compute; run code without provisioning servers; pay only for compute time used; event-driven; up to 15 min"], ["Amazon VPC", "Virtual Private Cloud; isolated network in AWS; you control IP ranges, subnets, route tables, gateways"], ["Security Groups", "Virtual firewalls for EC2 instances; control inbound/outbound traffic; stateful; allow rules only (no deny)"], ["NACLs (Network ACLs)", "Firewall at subnet level; stateless; supports allow AND deny rules; evaluated in order by rule number"], ["AWS IAM", "Identity and Access Management; manage users, groups, roles, and policies; controls who can access what; free service"], ["IAM Policies", "JSON documents defining permissions; Effect (Allow/Deny), Action, Resource; follow least privilege principle"], ["IAM Roles", "Temporary credentials for AWS services or cross-account access; no permanent passwords; assumed by services like EC2"], ["MFA (Multi-Factor Authentication)", "Extra layer of security; something you know (password) + something you have (device/token); always enable on root"], ["Root User", "Account owner with unrestricted access; use only for initial setup and billing; lock away credentials; enable MFA"], ["AWS Organizations", "Manage multiple AWS accounts centrally; consolidated billing; Service Control Policies (SCPs) for governance"], ["Amazon CloudFront", "Content Delivery Network (CDN); caches content at edge locations globally; reduces latency; works with S3, EC2, etc."], ["Amazon Route 53", "DNS web service; domain registration; health checks; routing policies: simple, weighted, latency, failover, geolocation"], ["Elastic Load Balancing (ELB)", "Distributes incoming traffic across multiple targets (EC2, containers); types: ALB (HTTP), NLB (TCP), GLB (3rd party)"], ["Auto Scaling", "Automatically adds/removes EC2 instances based on demand; maintains performance; reduces costs; set min/max/desired"], ["Amazon SQS", "Simple Queue Service; fully managed message queuing; decouples applications; standard and FIFO queues"], ["Amazon SNS", "Simple Notification Service; pub/sub messaging; sends notifications via email, SMS, HTTP, Lambda; fan-out pattern"], ["AWS CloudFormation", "Infrastructure as Code (IaC); define resources in JSON/YAML templates; automates provisioning; repeatable deployments"], ["AWS CloudTrail", "Logs all API calls in your AWS account; who did what, when, from where; governance, compliance, auditing"], ["Amazon CloudWatch", "Monitoring service; collects metrics, logs, alarms; monitors EC2, Lambda, RDS, etc.; set alerts and dashboards"], ["AWS Trusted Advisor", "Automated best practice checks; cost optimization, performance, security, fault tolerance, service limits"], ["AWS Config", "Tracks resource configurations over time; evaluates compliance against rules; shows configuration history"], ["Amazon GuardDuty", "Threat detection service; monitors for malicious activity using ML; analyzes CloudTrail, VPC Flow Logs, DNS logs"], ["AWS Shield", "DDoS protection; Standard (free, automatic); Advanced (paid, dedicated response team, cost protection)"], ["AWS WAF", "Web Application Firewall; protects against SQL injection, XSS; rules on CloudFront, ALB, API Gateway"], ["AWS KMS", "Key Management Service; create and manage encryption keys; integrates with most AWS services; automatic key rotation"], ["Well-Architected Framework", "6 pillars: Operational Excellence, Security, Reliability, Performance Efficiency, Cost Optimization, Sustainability"], ["Elasticity", "Ability to automatically scale resources up/down based on demand; key cloud advantage; avoid over/under-provisioning"], ["High Availability", "System designed to operate continuously; achieved through multi-AZ deployments and redundancy"], ["Fault Tolerance", "System continues operating even if components fail; redundancy at every layer; example: multi-AZ RDS"], ["Disaster Recovery Strategies", "Backup & Restore (cheapest) \u2192 Pilot Light \u2192 Warm Standby \u2192 Multi-Site Active-Active (fastest recovery)"], ["AWS Free Tier", "Three types: Always Free (Lambda 1M requests/mo), 12 Months Free (EC2 t2.micro 750 hrs/mo), Trials"], ["AWS Pricing Calculator", "Estimate cost of AWS services before deploying; create estimates for your architecture"], ["AWS Budgets", "Set custom cost and usage budgets; get alerts when you exceed or forecast to exceed thresholds"], ["AWS Cost Explorer", "Visualize and analyze AWS spending over time; filter by service, region, tag; forecast future costs"], ["Consolidated Billing", "Single bill for all accounts in AWS Organizations; volume discounts across accounts"], ["AWS Support Plans", "Basic (free), Developer ($29/mo), Business ($100/mo, 24/7), Enterprise On-Ramp ($5,500/mo), Enterprise ($15K/mo, TAM)"], ["TAM (Technical Account Manager)", "Dedicated AWS expert; proactive guidance; only available with Enterprise support plan"], ["Amazon Elastic Beanstalk", "PaaS; deploy web apps without managing infrastructure; supports Java, .NET, Node.js, Python, Docker"], ["Amazon ECS / EKS", "Container services; ECS = AWS-managed containers; EKS = managed Kubernetes; run Docker containers at scale"], ["AWS Fargate", "Serverless containers; run containers without managing servers; works with ECS and EKS; pay for resources used"], ["Amazon Redshift", "Data warehouse service; petabyte-scale analytics; SQL queries; columnar storage; fast OLAP"], ["AWS Artifact", "On-demand access to AWS compliance reports and agreements; SOC reports, PCI, ISO certifications"], ["AWS Marketplace", "Digital catalog of third-party software; buy and deploy on AWS; AMIs, containers, SaaS"], ["Six Advantages of Cloud", "1) Trade capex for opex 2) Economies of scale 3) Stop guessing capacity 4) Increase speed/agility 5) Stop spending on data centers 6) Go global in minutes"]], "color": {"red": 1.0, "green": 0.624, "blue": 0.039}};
+
+    function importDeck() {
+      const stack = {
+        id: crypto.randomUUID(),
+        title: deckData.title,
+        cards: deckData.cards.map(c => ({ id: crypto.randomUUID(), front: c[0], back: c[1] })),
+        color: deckData.color
+      };
+      const json = JSON.stringify(stack);
+      const utf8Bytes = new TextEncoder().encode(json);
+      let binary = '';
+      for (let i = 0; i < utf8Bytes.length; i++) binary += String.fromCharCode(utf8Bytes[i]);
+      const encoded = btoa(binary);
+      const importUrl = 'https://stackedflashcards.com/import?stack=' + encodeURIComponent(encoded);
+      // Try to open in app, fallback to App Store for non-iOS users
+      const w = window.open(importUrl, '_blank');
+      if (!w) window.location.href = importUrl;
+    }
+
+    function toggleQR(event) {
+      const qr = document.getElementById('qrcode');
+      const btn = event.target;
+      if (qr.style.display === 'flex') { qr.style.display = 'none'; btn.textContent = 'Show QR Code'; return; }
+      const stack = {
+        id: crypto.randomUUID(),
+        title: deckData.title,
+        cards: deckData.cards.map(c => ({ id: crypto.randomUUID(), front: c[0], back: c[1] })),
+        color: deckData.color
+      };
+      const json = JSON.stringify(stack);
+      const utf8Bytes = new TextEncoder().encode(json);
+      let binary = '';
+      for (let i = 0; i < utf8Bytes.length; i++) binary += String.fromCharCode(utf8Bytes[i]);
+      const encoded = btoa(binary);
+      const link = 'https://stackedflashcards.com/import?stack=' + encodeURIComponent(encoded);
+      qr.innerHTML = '';
+      if (link.length > 3000) {
+        qr.innerHTML = '<p style="color: #f87171; font-size: 0.88rem;">This deck is too large for a QR code. Use the Import button instead.</p>';
+        btn.textContent = 'Hide QR Code';
+        qr.style.display = 'flex';
+        return;
+      }
+      QRCode.toCanvas(link, { width: 200, margin: 2, color: { dark: '#000', light: '#fff' } }, (err, canvas) => {
+        if (!err) qr.appendChild(canvas);
+      });
+      btn.textContent = 'Hide QR Code';
+      qr.style.display = 'flex';
+    }
+  </script>
+</body>
+</html>
