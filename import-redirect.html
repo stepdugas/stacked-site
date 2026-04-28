@@ -435,12 +435,22 @@
 
   <!-- Hero -->
   <section class="hero">
-    <h1><span class="gradient-text">Almost there!</span></h1>
-    <p class="hero-subtitle">You need the Stacked app to import this flashcard deck.</p>
-    <a class="btn-primary" href="https://apps.apple.com/app/id6744585549" target="_blank" rel="noopener">
-      Download Stacked Free
-    </a>
-    <p class="secondary-text">Once installed, tap the import link again to add this deck to your library.</p>
+    <h1><span class="gradient-text" id="heroTitle">Almost there!</span></h1>
+    <p class="hero-subtitle" id="heroSubtitle">You need the Stacked app to import this flashcard deck.</p>
+
+    <!-- iOS with app: show tap-to-import button -->
+    <div id="importAction" style="display: none;">
+      <a class="btn-primary" id="importLink" href="#">Open in Stacked</a>
+      <p class="secondary-text">If the app doesn't open, download it first from the App Store.</p>
+    </div>
+
+    <!-- Default: show download button -->
+    <div id="downloadAction">
+      <a class="btn-primary" href="https://apps.apple.com/app/id6744585549" target="_blank" rel="noopener">
+        Download Stacked Free
+      </a>
+      <p class="secondary-text">Once installed, tap the import link again to add this deck to your library.</p>
+    </div>
   </section>
 
   <!-- How It Works -->
@@ -487,6 +497,27 @@
       <div class="footer-copy">&copy; 2026 Stacked Flashcards. All rights reserved.</div>
     </div>
   </footer>
+
+  <script>
+    // Check if there's a pending import from a deck page
+    const pendingUrl = localStorage.getItem('stacked_import_url');
+    const isIOS = /iPhone|iPad|iPod/.test(navigator.userAgent);
+
+    if (pendingUrl) {
+      // Show the import button instead of the download button
+      document.getElementById('importAction').style.display = 'block';
+      document.getElementById('importLink').href = pendingUrl;
+
+      if (isIOS) {
+        document.getElementById('heroTitle').textContent = 'Tap to import';
+        document.getElementById('heroSubtitle').textContent = 'Your flashcard deck is ready. Tap the button below to open it in Stacked.';
+        document.getElementById('downloadAction').style.display = 'none';
+      }
+
+      // Clean up after use
+      localStorage.removeItem('stacked_import_url');
+    }
+  </script>
 
 </body>
 </html>
