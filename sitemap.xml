@@ -146,6 +146,61 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://stackedflashcards.com/decks/act-vocabulary.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://stackedflashcards.com/decks/nclex-nursing.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://stackedflashcards.com/decks/comptia-a-plus.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://stackedflashcards.com/decks/comptia-security-plus.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://stackedflashcards.com/decks/organic-chemistry.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://stackedflashcards.com/decks/ap-calculus.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://stackedflashcards.com/decks/statistics-101.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://stackedflashcards.com/decks/accounting-101.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://stackedflashcards.com/decks/sociology-101.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://stackedflashcards.com/decks/german-101.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://stackedflashcards.com/decks/korean-basics.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://stackedflashcards.com/import-redirect.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>

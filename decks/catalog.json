@@ -182,5 +182,93 @@
     "description": "Key concepts for the AWS Certified Cloud Practitioner exam covering cloud concepts, security, technology, and billing.",
     "card_count": 60,
     "color": "#FF9F0A"
+  },
+  {
+    "slug": "act-vocabulary",
+    "title": "ACT Vocabulary",
+    "category": "Test Prep",
+    "description": "High-frequency ACT vocabulary words to boost your English and Reading scores.",
+    "card_count": 50,
+    "color": "#007AFF"
+  },
+  {
+    "slug": "nclex-nursing",
+    "title": "NCLEX-RN Nursing Essentials",
+    "category": "Professional",
+    "description": "Essential nursing concepts for the NCLEX-RN exam covering patient care, pharmacology, and clinical procedures.",
+    "card_count": 50,
+    "color": "#30D158"
+  },
+  {
+    "slug": "comptia-a-plus",
+    "title": "CompTIA A+ Core Concepts",
+    "category": "Professional",
+    "description": "Key concepts for the CompTIA A+ certification covering hardware, networking, operating systems, and troubleshooting.",
+    "card_count": 30,
+    "color": "#5AC8FA"
+  },
+  {
+    "slug": "organic-chemistry",
+    "title": "Organic Chemistry Essentials",
+    "category": "College",
+    "description": "Core organic chemistry concepts including functional groups, reactions, and nomenclature.",
+    "card_count": 30,
+    "color": "#AF52DE"
+  },
+  {
+    "slug": "statistics-101",
+    "title": "Statistics 101",
+    "category": "College",
+    "description": "Introductory statistics concepts including descriptive stats, probability, distributions, and hypothesis testing.",
+    "card_count": 30,
+    "color": "#FF9F0A"
+  },
+  {
+    "slug": "german-101",
+    "title": "German 101 \u2014 Common Phrases",
+    "category": "Languages",
+    "description": "Essential German phrases and vocabulary for beginners and travelers.",
+    "card_count": 30,
+    "color": "#FF375F"
+  },
+  {
+    "slug": "korean-basics",
+    "title": "Korean Basics \u2014 Common Phrases",
+    "category": "Languages",
+    "description": "Essential Korean phrases with romanization for beginners learning Korean.",
+    "card_count": 30,
+    "color": "#007AFF"
+  },
+  {
+    "slug": "accounting-101",
+    "title": "Accounting 101",
+    "category": "College",
+    "description": "Fundamental accounting concepts including the accounting equation, financial statements, and key terms.",
+    "card_count": 30,
+    "color": "#30D158"
+  },
+  {
+    "slug": "ap-calculus",
+    "title": "AP Calculus AB",
+    "category": "AP Exams",
+    "description": "Key concepts for AP Calculus AB including limits, derivatives, integrals, and the fundamental theorem.",
+    "card_count": 30,
+    "color": "#AF52DE"
+  },
+  {
+    "slug": "sociology-101",
+    "title": "Sociology 101",
+    "category": "College",
+    "description": "Key sociology concepts including social structure, culture, inequality, and major theoretical perspectives.",
+    "card_count": 30,
+    "color": "#5AC8FA"
+  },
+  {
+    "slug": "comptia-security-plus",
+    "title": "CompTIA Security+ Essentials",
+    "category": "Professional",
+    "description": "Core cybersecurity concepts for the CompTIA Security+ certification exam.",
+    "card_count": 30,
+    "color": "#FF375F"
   }
 ]
