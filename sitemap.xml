@@ -31,14 +31,34 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://stackedflashcards.com/decks/sat-vocabulary.html</loc>
+    <loc>https://stackedflashcards.com/decks/accounting-101.html</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://stackedflashcards.com/decks/gre-vocabulary.html</loc>
+    <loc>https://stackedflashcards.com/decks/act-vocabulary.html</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://stackedflashcards.com/decks/anatomy-cardiovascular-respiratory.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://stackedflashcards.com/decks/anatomy-digestive-endocrine.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://stackedflashcards.com/decks/anatomy-nervous-system.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://stackedflashcards.com/decks/anatomy-skeletal-muscular.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://stackedflashcards.com/decks/ap-biology.html</loc>
@@ -46,12 +66,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://stackedflashcards.com/decks/ap-us-history.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://stackedflashcards.com/decks/ap-psychology.html</loc>
+    <loc>https://stackedflashcards.com/decks/ap-calculus.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -61,97 +76,27 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://stackedflashcards.com/decks/ap-world-history.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://stackedflashcards.com/decks/ap-government.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://stackedflashcards.com/decks/spanish-101.html</loc>
+    <loc>https://stackedflashcards.com/decks/ap-psychology.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://stackedflashcards.com/decks/french-101.html</loc>
+    <loc>https://stackedflashcards.com/decks/ap-us-history.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://stackedflashcards.com/decks/japanese-hiragana.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://stackedflashcards.com/decks/italian-101.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://stackedflashcards.com/decks/mandarin-basics.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://stackedflashcards.com/decks/anatomy-physiology.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://stackedflashcards.com/decks/us-state-capitals.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://stackedflashcards.com/decks/periodic-table.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://stackedflashcards.com/decks/psychology-101.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://stackedflashcards.com/decks/medical-terminology.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://stackedflashcards.com/decks/world-capitals.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://stackedflashcards.com/decks/literary-terms.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://stackedflashcards.com/decks/economics-101.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://stackedflashcards.com/decks/computer-science-basics.html</loc>
+    <loc>https://stackedflashcards.com/decks/ap-world-history.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://stackedflashcards.com/decks/aws-cloud-practitioner.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://stackedflashcards.com/decks/act-vocabulary.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://stackedflashcards.com/decks/nclex-nursing.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -166,27 +111,17 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://stackedflashcards.com/decks/organic-chemistry.html</loc>
+    <loc>https://stackedflashcards.com/decks/computer-science-basics.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://stackedflashcards.com/decks/ap-calculus.html</loc>
+    <loc>https://stackedflashcards.com/decks/economics-101.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://stackedflashcards.com/decks/statistics-101.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://stackedflashcards.com/decks/accounting-101.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://stackedflashcards.com/decks/sociology-101.html</loc>
+    <loc>https://stackedflashcards.com/decks/french-101.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -196,7 +131,117 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://stackedflashcards.com/decks/gre-vocabulary.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://stackedflashcards.com/decks/italian-101.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://stackedflashcards.com/decks/japanese-hiragana.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://stackedflashcards.com/decks/korean-basics.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://stackedflashcards.com/decks/literary-terms.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://stackedflashcards.com/decks/mandarin-basics.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://stackedflashcards.com/decks/medical-terminology.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://stackedflashcards.com/decks/nursing-cardiac-respiratory.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://stackedflashcards.com/decks/nursing-lab-values.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://stackedflashcards.com/decks/nursing-maternal-newborn.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://stackedflashcards.com/decks/nursing-pediatric.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://stackedflashcards.com/decks/nursing-pharmacology.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://stackedflashcards.com/decks/orgo-functional-groups.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://stackedflashcards.com/decks/orgo-reactions-mechanisms.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://stackedflashcards.com/decks/orgo-stereochemistry-spectroscopy.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://stackedflashcards.com/decks/periodic-table.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://stackedflashcards.com/decks/psychology-101.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://stackedflashcards.com/decks/sat-vocabulary.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://stackedflashcards.com/decks/sociology-101.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://stackedflashcards.com/decks/spanish-101.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://stackedflashcards.com/decks/statistics-101.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://stackedflashcards.com/decks/us-state-capitals.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://stackedflashcards.com/decks/world-capitals.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
