@@ -64,11 +64,35 @@
     "color": "#FF375F"
   },
   {
-    "slug": "anatomy-physiology",
-    "title": "Anatomy & Physiology",
+    "slug": "anatomy-skeletal-muscular",
+    "title": "Anatomy: Skeletal & Muscular System",
     "category": "College",
-    "description": "Essential anatomy and physiology terms covering body systems, organs, and functions.",
-    "card_count": 30,
+    "description": "Comprehensive flashcards covering bone classification, major bones, joint types, muscle actions, sliding filament theory, and common injuries.",
+    "card_count": 50,
+    "color": "#FF9F0A"
+  },
+  {
+    "slug": "anatomy-cardiovascular-respiratory",
+    "title": "Anatomy: Cardiovascular & Respiratory",
+    "category": "College",
+    "description": "Comprehensive flashcards covering heart anatomy, cardiac cycle, blood vessels, blood composition, respiratory anatomy, gas exchange, and lung volumes.",
+    "card_count": 49,
+    "color": "#FF375F"
+  },
+  {
+    "slug": "anatomy-nervous-system",
+    "title": "Anatomy: Nervous System & Brain",
+    "category": "College",
+    "description": "Comprehensive flashcards covering neuron structure, action potentials, neurotransmitters, brain regions, cranial nerves, and autonomic nervous system.",
+    "card_count": 49,
+    "color": "#AF52DE"
+  },
+  {
+    "slug": "anatomy-digestive-endocrine",
+    "title": "Anatomy: Digestive & Endocrine",
+    "category": "College",
+    "description": "Comprehensive flashcards covering GI tract organs, digestive enzymes, liver functions, endocrine glands, hormones, and feedback loops.",
+    "card_count": 47,
     "color": "#30D158"
   },
   {
@@ -192,12 +216,44 @@
     "color": "#007AFF"
   },
   {
-    "slug": "nclex-nursing",
-    "title": "NCLEX-RN Nursing Essentials",
+    "slug": "nursing-pharmacology",
+    "title": "Nursing Pharmacology",
     "category": "Professional",
-    "description": "Essential nursing concepts for the NCLEX-RN exam covering patient care, pharmacology, and clinical procedures.",
+    "description": "Major drug classes, mechanisms of action, side effects, nursing considerations, and antidotes for nursing students and NCLEX prep.",
+    "card_count": 60,
+    "color": "#007AFF"
+  },
+  {
+    "slug": "nursing-cardiac-respiratory",
+    "title": "Nursing: Cardiac & Respiratory",
+    "category": "Professional",
+    "description": "Heart failure, MI assessment, EKG basics, ABG interpretation, oxygen delivery systems, chest tubes, and pulmonary conditions for nursing students.",
     "card_count": 50,
-    "color": "#30D158"
+    "color": "#007AFF"
+  },
+  {
+    "slug": "nursing-maternal-newborn",
+    "title": "Nursing: Maternal & Newborn",
+    "category": "Professional",
+    "description": "Pregnancy stages, labor and delivery, postpartum care, newborn assessment, and maternal-newborn complications for nursing students.",
+    "card_count": 50,
+    "color": "#007AFF"
+  },
+  {
+    "slug": "nursing-pediatric",
+    "title": "Nursing: Pediatric",
+    "category": "Professional",
+    "description": "Growth and development milestones, common pediatric conditions, medication calculations, and age-specific nursing considerations.",
+    "card_count": 50,
+    "color": "#007AFF"
+  },
+  {
+    "slug": "nursing-lab-values",
+    "title": "Nursing: Lab Values & Vital Signs",
+    "category": "Professional",
+    "description": "Essential lab values, vital signs, critical values, electrolytes, CBC, coagulation studies, cardiac markers, and ABG interpretation for nursing students.",
+    "card_count": 50,
+    "color": "#007AFF"
   },
   {
     "slug": "comptia-a-plus",
@@ -208,10 +264,26 @@
     "color": "#5AC8FA"
   },
   {
-    "slug": "organic-chemistry",
-    "title": "Organic Chemistry Essentials",
+    "slug": "orgo-functional-groups",
+    "title": "Organic Chemistry: Functional Groups & Nomenclature",
     "category": "College",
-    "description": "Core organic chemistry concepts including functional groups, reactions, and nomenclature.",
+    "description": "All major organic functional groups, IUPAC naming rules, common names, physical properties, and intermolecular forces.",
+    "card_count": 52,
+    "color": "#FF9F0A"
+  },
+  {
+    "slug": "orgo-reactions-mechanisms",
+    "title": "Organic Chemistry: Reactions & Mechanisms",
+    "category": "College",
+    "description": "SN1/SN2/E1/E2 mechanisms, addition reactions, oxidation/reduction, Grignard, EAS, and key reagent cards.",
+    "card_count": 55,
+    "color": "#FF375F"
+  },
+  {
+    "slug": "orgo-stereochemistry-spectroscopy",
+    "title": "Organic Chemistry: Stereochemistry & Spectroscopy",
+    "category": "College",
+    "description": "Chirality, R/S configuration, conformational analysis, IR spectroscopy, NMR, and mass spectrometry.",
     "card_count": 30,
     "color": "#AF52DE"
   },
@@ -270,101 +342,5 @@
     "description": "Core cybersecurity concepts for the CompTIA Security+ certification exam.",
     "card_count": 30,
     "color": "#FF375F"
-  },
-  {
-    "slug": "orgo-functional-groups",
-    "title": "Organic Chemistry: Functional Groups & Nomenclature",
-    "category": "College",
-    "description": "All major organic functional groups, IUPAC naming rules, common names, physical properties, and intermolecular forces.",
-    "card_count": 52,
-    "color": "#FF9F0A"
-  },
-  {
-    "slug": "orgo-reactions-mechanisms",
-    "title": "Organic Chemistry: Reactions & Mechanisms",
-    "category": "College",
-    "description": "SN1/SN2/E1/E2 mechanisms, addition reactions, oxidation/reduction, Grignard, EAS, and key reagent cards.",
-    "card_count": 55,
-    "color": "#FF375F"
-  },
-  {
-    "slug": "orgo-stereochemistry-spectroscopy",
-    "title": "Organic Chemistry: Stereochemistry & Spectroscopy",
-    "category": "College",
-    "description": "Chirality, R/S configuration, conformational analysis, IR spectroscopy, NMR, and mass spectrometry.",
-    "card_count": 30,
-    "color": "#AF52DE"
-  },
-  {
-    "slug": "anatomy-skeletal-muscular",
-    "title": "Anatomy: Skeletal & Muscular System",
-    "category": "College",
-    "description": "Comprehensive flashcards covering bone classification, major bones, joint types, muscle actions, sliding filament theory, and common injuries.",
-    "card_count": 50,
-    "color": "#FF9F0A"
-  },
-  {
-    "slug": "anatomy-cardiovascular-respiratory",
-    "title": "Anatomy: Cardiovascular & Respiratory",
-    "category": "College",
-    "description": "Comprehensive flashcards covering heart anatomy, cardiac cycle, blood vessels, blood composition, respiratory anatomy, gas exchange, and lung volumes.",
-    "card_count": 49,
-    "color": "#FF375F"
-  },
-  {
-    "slug": "anatomy-nervous-system",
-    "title": "Anatomy: Nervous System & Brain",
-    "category": "College",
-    "description": "Comprehensive flashcards covering neuron structure, action potentials, neurotransmitters, brain regions, cranial nerves, and autonomic nervous system.",
-    "card_count": 49,
-    "color": "#AF52DE"
-  },
-  {
-    "slug": "anatomy-digestive-endocrine",
-    "title": "Anatomy: Digestive & Endocrine",
-    "category": "College",
-    "description": "Comprehensive flashcards covering GI tract organs, digestive enzymes, liver functions, endocrine glands, hormones, and feedback loops.",
-    "card_count": 47,
-    "color": "#30D158"
-  },
-  {
-    "slug": "nursing-pharmacology",
-    "title": "Nursing Pharmacology",
-    "category": "Professional",
-    "description": "Major drug classes, mechanisms of action, side effects, nursing considerations, and antidotes for nursing students and NCLEX prep.",
-    "card_count": 60,
-    "color": "#007AFF"
-  },
-  {
-    "slug": "nursing-cardiac-respiratory",
-    "title": "Nursing: Cardiac & Respiratory",
-    "category": "Professional",
-    "description": "Heart failure, MI assessment, EKG basics, ABG interpretation, oxygen delivery systems, chest tubes, and pulmonary conditions for nursing students.",
-    "card_count": 50,
-    "color": "#007AFF"
-  },
-  {
-    "slug": "nursing-maternal-newborn",
-    "title": "Nursing: Maternal & Newborn",
-    "category": "Professional",
-    "description": "Pregnancy stages, labor and delivery, postpartum care, newborn assessment, and maternal-newborn complications for nursing students.",
-    "card_count": 50,
-    "color": "#007AFF"
-  },
-  {
-    "slug": "nursing-pediatric",
-    "title": "Nursing: Pediatric",
-    "category": "Professional",
-    "description": "Growth and development milestones, common pediatric conditions, medication calculations, and age-specific nursing considerations.",
-    "card_count": 50,
-    "color": "#007AFF"
-  },
-  {
-    "slug": "nursing-lab-values",
-    "title": "Nursing: Lab Values & Vital Signs",
-    "category": "Professional",
-    "description": "Essential lab values, vital signs, critical values, electrolytes, CBC, coagulation studies, cardiac markers, and ABG interpretation for nursing students.",
-    "card_count": 50,
-    "color": "#007AFF"
   }
 ]

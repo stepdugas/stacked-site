@@ -25,8 +25,9 @@
       if (stack) {
         try {
           localStorage.setItem('stacked_pending_import', stack);
-          // Also store the full original URL for easy retry
-          localStorage.setItem('stacked_import_url', window.location.href);
+          // Always store the canonical universal-link URL so the "Open in Stacked" button works
+          var importUrl = 'https://stackedflashcards.com/import?stack=' + encodeURIComponent(stack);
+          localStorage.setItem('stacked_import_url', importUrl);
         } catch (e) {
           // localStorage unavailable — silent fail
         }
@@ -514,8 +515,28 @@
         document.getElementById('downloadAction').style.display = 'none';
       }
 
-      // Clean up after use
+      // Keep stacked_pending_import so the user can retry after installing the app.
+      // Only clear the URL — the pending import data stays for post-install retry.
       localStorage.removeItem('stacked_import_url');
+
+      // Rebuild the URL from pending import if needed on next visit
+    } else {
+      // Check if there's a pending import from a previous visit (post-install retry)
+      var pending = localStorage.getItem('stacked_pending_import');
+      if (pending) {
+        var retryUrl = 'https://stackedflashcards.com/import?stack=' + encodeURIComponent(pending);
+        document.getElementById('importAction').style.display = 'block';
+        document.getElementById('importLink').href = retryUrl;
+
+        if (isIOS) {
+          document.getElementById('heroTitle').textContent = 'Tap to import';
+          document.getElementById('heroSubtitle').textContent = 'Your flashcard deck is ready. Tap the button below to open it in Stacked.';
+          document.getElementById('downloadAction').style.display = 'none';
+        }
+
+        // Clean up pending import after showing retry
+        localStorage.removeItem('stacked_pending_import');
+      }
     }
   </script>
 
